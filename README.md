@@ -1,2 +1,1 @@
 # Insure
-Life Insurance company
