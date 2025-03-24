@@ -1,3 +1,0 @@
-# Insure
-
-## Life Insurance
