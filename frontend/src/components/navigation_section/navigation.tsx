@@ -1,16 +1,23 @@
 import CustomLink from "@/lib/Helper_function/links";
 import "@/styles/navigation.css";
 import "@/styles/navigation.css";
+import Image from "next/image";
+import logo from "@/assets/logo-light.png"
 
 export default function Navigation() {
   return (
-    <section className="flex flex-row justify-between items-center pr-20 border-1 border-white">
+    <section className="flex flex-row justify-between items-center pr-20">
       {/* Logo */}
       <CustomLink
         href="/home"
-        className="flex p-10 border-r border-black text-lg text-amber-100 bg-custom-blue"
+        className="flex p-6 max-h-screen bg-custom-blue"
       >
-        Logo
+        <Image
+          src={logo}
+          alt="logo"
+          priority
+          width={142}
+        />
       </CustomLink>
 
       {/* Navigation Links */}
