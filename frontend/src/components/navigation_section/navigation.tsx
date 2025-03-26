@@ -4,9 +4,14 @@ import "@/styles/navigation.css";
 
 export default function Navigation() {
   return (
-    <section className="flex flex-row justify-between items-center pr-20 border-2 border-white">
+    <section className="flex flex-row justify-between items-center pr-20 border-1 border-white">
       {/* Logo */}
-      <CustomLink href="/home" className="flex p-10 border-r-2 border-white">Logo</CustomLink>
+      <CustomLink
+        href="/home"
+        className="flex p-10 border-r border-black text-lg text-amber-100 bg-custom-blue"
+      >
+        Logo
+      </CustomLink>
 
       {/* Navigation Links */}
       <nav className="flex items-center gap-6">
@@ -21,8 +26,18 @@ export default function Navigation() {
         {/* Search button */}
         <div className="ml-8">
           <button className="px-4 py-1 text-sm">
-            Search
+            |<span className="ml-6">Search</span>
           </button>
+        </div>
+
+        {/* Quote */}
+        <div className="ml-8">
+          <button className="px-4 py-1 text-sm">Get a Quote</button>
+        </div>
+
+        {/* Search button */}
+        <div className="ml-8">
+          <button className="px-4 py-1 text-sm">Call experts</button>
         </div>
       </nav>
     </section>
