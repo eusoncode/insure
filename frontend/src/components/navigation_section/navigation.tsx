@@ -6,17 +6,17 @@ export default function Navigation() {
   return (
     <section className="flex flex-col">
       {/* First Navigation bar*/}
-      <div className="flex flex-row justify-between align-center py-2 px-6 bg-base-didi border-2 border-red-600">
-        <ul className="flex flex-row border-2 border-red-600">
-          <li className="">
+      <div className="flex flex-row justify-between align-center space-x-8 py-2 px-6 bg-base-didi border-2 border-red-600">
+        <ul className="flex flex-row pl-14 border-2 border-red-600">
+          <li className="flex items-center font-bold text-white">
             <a href="#">30 Commercial Road Fratton, Australia</a>
           </li>
-          <li className="pl-8">
+          <li className="flex items-center font-bold text-white pl-16">
             <a href="mailto:needhelp@company.com">needhelp@company.com</a>
           </li>
         </ul>
-        <div className="flex flex-row border-2 border-red-600 gap-4">
-          <ul className="flex flex-row px-2 space-x-4 border-2 border-red-600">
+        <div className="flex flex-row pr-8 gap-25 border-2 border-red-600">
+          <ul className="flex flex-row justify-evenly items-center px-2 text-white font-bold space-x-10 border-2 border-red-600">
             <li>
               <a href="#">Make a Claim</a>
             </li>
@@ -27,32 +27,17 @@ export default function Navigation() {
               <a href="#">About</a>
             </li>
           </ul>
-          <div className="flex flex-row space-x-2 border-2 border-red-600">
-            <a href="https://twitter.com">
-              <span className="text-xs">Twitter</span>
-            </a>
-            <a href="https://facebook.com">
-              <span className="">Facebook</span>
-            </a>
-            <a href="https://pinterest.com">
-              <span className="">Pinterest</span>
-            </a>
-            <a href="https://instagram.com">
-              <span className="">Instagram</span>
-            </a>
-          </div>
-
-          <div className="flex flex-row space-x-2 border-2 border-red-600">
-            <div className="flex justify-center items-center text-lg text-white border-1 rounded-4xl w-8 h-8 bg-socials-gray border-transparent">
+          <div className="flex flex-row justify-center items-center space-x-4 border-2 border-red-600">
+            <div className="flex justify-center font-bold items-center text-xs text-socials-gray border-1 rounded-4xl w-4 h-4 bg-white border-transparent">
               t
             </div>
-            <div className="flex justify-center items-center text-lg text-white border-1 rounded-4xl w-8 h-8 bg-socials-gray border-transparent">
+            <div className="flex justify-center font-bold items-center text-xs text-socials-gray border-1 rounded-4xl w-4 h-4 bg-white border-transparent">
               f
             </div>
-            <div className="flex justify-center items-center text-lg text-white border-1 rounded-4xl w-8 h-8 bg-socials-gray border-transparent">
+            <div className="flex justify-center font-bold items-center text-xs text-socials-gray border-1 rounded-4xl w-4 h-4 bg-white border-transparent">
               p
             </div>
-            <div className="flex justify-center items-center text-lg text-white border-1 rounded-4xl w-8 h-8 bg-socials-gray border-transparent">
+            <div className="flex justify-center font-bold items-center text-xs text-socials-gray border-1 rounded-4xl w-4 h-4 bg-white border-transparent">
               @
             </div>
           </div>
@@ -64,15 +49,15 @@ export default function Navigation() {
         <div>
           <CustomLink
             href="/home"
-            className="flex max-w-3xs p-6 max-h-screen bg-custom-blue border-2 border-green-600"
+            className="flex max-w-3xs p-8 max-h-screen bg-custom-blue border-2 border-green-600"
           >
-            <Image src={logo} alt="logo" priority width={100} />
+            <Image src={logo} alt="logo" priority width={700} />
           </CustomLink>
         </div>
 
         {/* Navigation Links */}
         <div className="flex items-center gap-6 border-2 border-green-600">
-          <nav className="flex items-center gap-6">
+          <nav className="flex items-center gap-10">
             <CustomLink href="/home">Home</CustomLink>
             <CustomLink href="/about">About</CustomLink>
             <CustomLink href="/pages">Pages</CustomLink>
