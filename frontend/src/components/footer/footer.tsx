@@ -4,16 +4,16 @@ import logo from "@/assets/logo-light.png";
 
 export default function Footer() {
   return (
-    <footer className="flex justify-center align-center min-h-175 bg-custom-blue text-white py-10">
-      <div className="container flex flex-col justify-between mt-16 mx-auto border-2 border-transparent">
+    <footer className="flex justify-center align-center min-h-155 bg-custom-blue text-white py-10">
+      <div className="flex flex-col justify-between border-2 border-transparent">
         {/* Footer box for further inqury */}
-        <div className="flex flex-row mt-16 space-x-2 justify-between items-start space-y-0">
+        <div className="flex flex-row mt-16 space-x-8 justify-between items-start space-y-0">
           {/* Logo and socials */}
           <div className="flex flex-col max-w space-y-2 justify-start items-start">
             {/* Logo */}
             <div>
               <CustomLink href="/home" className="flex mb-4">
-                <Image src={logo} alt="logo" priority width={200} />
+                <Image src={logo} alt="logo" priority width={155} />
               </CustomLink>
             </div>
             <h3 className="flex flex-wrap font-sans font-bold text-xl">
@@ -44,7 +44,7 @@ export default function Footer() {
             <p className="font-sans text-insure-text-dark">
               88 Broklyn Golden Road Street, <br /> New York. USA
             </p>
-            <div className="flex flex-col justify-center items-start space-y-2 mt-4">
+            <div className="flex flex-col mt-6 justify-center items-start space-y-2">
               <div className="flex flex-row space-x-4">
                 <i>@</i>
                 <p>+92(8800)-6930</p>
@@ -57,18 +57,18 @@ export default function Footer() {
           </div>
 
           {/* Instagram */}
-          <div className="flex flex-col justify-start items-start space-y-6 max-w-sm">
+          <div className="flex flex-col justify-start items-start space-y-6 max-w-70">
             <h2 className="flex flex-row space-x-4 justify-center items-center font-bold text-[20px] leading-[24px]">
               <p>Instagram</p>
               <div className="border-2 border-base-didi w-6 rounded-2xl"></div>
             </h2>
-            <ul className="container flex flex-wrap flex-row w-full space-x-2 mt-4 space-y-2">
-              <li className="h-24 w-29 rounded-sm bg-gray-400 border-2 border-transparent"></li>
-              <li className="h-24 w-29 rounded-sm bg-gray-400 border-2 border-transparent"></li>
-              <li className="h-24 w-29 rounded-sm bg-gray-400 border-2 border-transparent"></li>
-              <li className="h-24 w-29 rounded-sm bg-gray-400 border-2 border-transparent"></li>
-              <li className="h-24 w-29 rounded-sm bg-gray-400 border-2 border-transparent"></li>
-              <li className="h-24 w-29 rounded-sm bg-gray-400 border-2 border-transparent"></li>
+            <ul className="flex flex-wrap flex-row w-full space-x-2 mt-4 space-y-2">
+              <li className="h-20 w-20 rounded-sm bg-gray-400 border-2 border-transparent"></li>
+              <li className="h-20 w-20 rounded-sm bg-gray-400 border-2 border-transparent"></li>
+              <li className="h-20 w-20 rounded-sm bg-gray-400 border-2 border-transparent"></li>
+              <li className="h-20 w-20 rounded-sm bg-gray-400 border-2 border-transparent"></li>
+              <li className="h-20 w-20 rounded-sm bg-gray-400 border-2 border-transparent"></li>
+              <li className="h-20 w-20 rounded-sm bg-gray-400 border-2 border-transparent"></li>
             </ul>
           </div>
 
@@ -84,17 +84,17 @@ export default function Footer() {
             <form
               action="#"
               method="POST"
-              className="container mx-auto flex border-2 border-blue-600"
+              className="mx-auto mt-6 flex border-2 border-blue-600"
             >
               <input
                 type="email"
                 name="email"
                 placeholder="Email Address"
-                className="flex justify-center items-center pl-8 pr-12 bg-white font-bold text-black"
+                className="flex justify-center items-center pl-4 pr-2 bg-white font-bold text-black"
               />
               <button
                 type="submit"
-                className="px-1 py-6 bg-base-didi border-2 border-blue-600"
+                className="px-1 py-4 bg-base-didi border-2 border-blue-600"
               >
                 <span>Submit</span>
               </button>

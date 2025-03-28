@@ -6,7 +6,7 @@ export default function Navigation() {
   return (
     <section className="flex flex-col">
       {/* First Navigation bar*/}
-      <div className="flex flex-row w-full justify-between align-center py-4 px-6 border-2 border-red-600">
+      <div className="flex flex-row justify-between align-center py-2 px-6 bg-base-didi border-2 border-red-600">
         <ul className="flex flex-row border-2 border-red-600">
           <li className="">
             <a href="#">30 Commercial Road Fratton, Australia</a>
@@ -15,7 +15,7 @@ export default function Navigation() {
             <a href="mailto:needhelp@company.com">needhelp@company.com</a>
           </li>
         </ul>
-        <div className="flex flex-row border-2 border-red-600 gap-32">
+        <div className="flex flex-row border-2 border-red-600 gap-4">
           <ul className="flex flex-row px-2 space-x-4 border-2 border-red-600">
             <li>
               <a href="#">Make a Claim</a>
@@ -27,9 +27,9 @@ export default function Navigation() {
               <a href="#">About</a>
             </li>
           </ul>
-          <div className="flex flex-row space-x-2 px-2 border-2 border-red-600">
+          <div className="flex flex-row space-x-2 border-2 border-red-600">
             <a href="https://twitter.com">
-              <span className="">Twitter</span>
+              <span className="text-xs">Twitter</span>
             </a>
             <a href="https://facebook.com">
               <span className="">Facebook</span>
@@ -40,6 +40,21 @@ export default function Navigation() {
             <a href="https://instagram.com">
               <span className="">Instagram</span>
             </a>
+          </div>
+
+          <div className="flex flex-row space-x-2 border-2 border-red-600">
+            <div className="flex justify-center items-center text-lg text-white border-1 rounded-4xl w-8 h-8 bg-socials-gray border-transparent">
+              t
+            </div>
+            <div className="flex justify-center items-center text-lg text-white border-1 rounded-4xl w-8 h-8 bg-socials-gray border-transparent">
+              f
+            </div>
+            <div className="flex justify-center items-center text-lg text-white border-1 rounded-4xl w-8 h-8 bg-socials-gray border-transparent">
+              p
+            </div>
+            <div className="flex justify-center items-center text-lg text-white border-1 rounded-4xl w-8 h-8 bg-socials-gray border-transparent">
+              @
+            </div>
           </div>
         </div>
       </div>
