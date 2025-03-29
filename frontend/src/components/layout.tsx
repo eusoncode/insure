@@ -4,7 +4,7 @@ import { LayoutProps } from "@/types/next-auth";
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="flex flex-col border-2 border-violet-600">
+    <div className="flex flex-col max-h-screen">
       {/* Header stays at the top */}
       <header>
         <Navigation />

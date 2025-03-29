@@ -13,7 +13,7 @@ import Track_your_claim_section from "@/components/body_section/track_your_claim
 export default function Main_section() {
   return (
     <section className="container">
-      <div className="flex flex-col max-h-screen max-w-screen">
+      <div className="flex flex-col max-h-screen max-w-screen mt-20 mb-2">
         <Insurance_section />
         <Save_money_section />
         <About_company_section />

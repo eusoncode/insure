@@ -1,41 +1,53 @@
-  @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500&display=swap');
-  @import 'tailwindcss';
+/* Import Google Font and Tailwind */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500&display=swap');
+@import 'tailwindcss';
 
-
+/* Root Theme Tokens */
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
+  --font-sans: 'Kumbh Sans', sans-serif;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --color-custom-blue: #eb2d23;
-}
-
-@media (prefers-color-scheme: white) {
-  :root {
-    --background: #ffffff;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@theme {
-  /* Colors*/
+  /* Custom Colors */
   --color-custom-blue: #2b2b5e;
   --color-custom-darker-blue: #252554;
   --color-insure-text-dark: #a0a0c0;
   --color-socials-gray: #46467d;
   --color-base-didi: #00cde5;
   
-  /* Fonts*/
-  --font-sans: 'Kumbh Sans', sans-serif;
+  /* Patterns */
+  --pattern-header: url('./../assets/header-top-pattern.png');
+}
+
+/* Optional: Override for light mode detection */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #ffffff;
+    --foreground: #ededed;
+  }
+}
+
+/* Base Body Styling */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Tailwind @theme inline tokens */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --color-custom-blue: var(--color-custom-blue);
+  --color-custom-darker-blue: var(--color-custom-darker-blue);
+  --color-insure-text-dark: var(--color-insure-text-dark);
+  --color-base-didi: var(--color-base-didi);
+}
+
+/* Background Utility Example */
+.bg-header-pattern {
+  background-image: var(--pattern-header);
+  background-repeat: no-repeat;
+  background-size: cover;
 }

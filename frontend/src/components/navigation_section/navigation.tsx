@@ -1,48 +1,96 @@
 import CustomLink from "@/lib/Helper_function/links";
 import Image from "next/image";
-import logo from "@/assets/logo-light.png"
+import logo from "@/assets/logo-light.png";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export default function Navigation() {
   return (
     <section className="flex flex-col">
       {/* First Navigation bar*/}
-      <div className="flex flex-row justify-between align-center space-x-8 py-2 px-6 bg-base-didi border-2 border-red-600">
-        <ul className="flex flex-row pl-14 border-2 border-red-600">
-          <li className="flex items-center font-bold text-white">
-            <a href="#">30 Commercial Road Fratton, Australia</a>
+      <div className="flex flex-col md:flex-row justify-between items-center py-1 px-6 bg-base-didi w-full bg-header-pattern">
+        {/* Left Info Section */}
+        <ul className="flex flex-col md:flex-row items-center gap-4 md:gap-8 pl-8">
+          <li className="flex items-center text-[15px] space-x-2 font-medium text-white transition-colors duration-500 hover:text-[#2b2b5e]">
+            <i className="fas fa-map-marker-alt text-white text-[15px] mr-2"></i>
+            <a href="#" className="font-bold no-underline hover:underline">
+              30 Commercial Road Fratton, Australia
+            </a>
           </li>
-          <li className="flex items-center font-bold text-white pl-16">
-            <a href="mailto:needhelp@company.com">needhelp@company.com</a>
+          <li className="flex items-center text-[15px] space-x-2 font-medium text-white transition-colors duration-500 hover:text-[#2b2b5e]">
+            <i className="fas fa-envelope text-white text-[15px] mr-2"></i>
+            <a
+              href="mailto:needhelp@company.com"
+              className="font-bold no-underline hover:underline"
+            >
+              needhelp@company.com
+            </a>
           </li>
         </ul>
-        <div className="flex flex-row pr-8 gap-25 border-2 border-red-600">
-          <ul className="flex flex-row justify-evenly items-center px-2 text-white font-bold space-x-10 border-2 border-red-600">
+
+        {/* Right Menu and Social Icons */}
+        <div className="flex flex-col md:flex-row items-center gap-6 mt-4 md:mt-0">
+          {/* Menu */}
+          <ul className="flex items-center list-none space-x-[35px]">
             <li>
-              <a href="#">Make a Claim</a>
+              <a
+                href="#"
+                className="text-[15px] font-bold text-white no-underline transition-colors duration-500 hover:text-[#2b2b5e] hover:underline"
+              >
+                Make a Claim
+              </a>
             </li>
             <li>
-              <a href="#">FAQs</a>
+              <a
+                href="#"
+                className="text-[15px] font-bold text-white no-underline transition-colors duration-500 hover:text-[#2b2b5e] hover:underline"
+              >
+                FAQs
+              </a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a
+                href="#"
+                className="text-[15px] font-bold text-white no-underline transition-colors duration-500 hover:text-[#2b2b5e] hover:underline"
+              >
+                About
+              </a>
             </li>
           </ul>
-          <div className="flex flex-row justify-center items-center space-x-4 border-2 border-red-600">
-            <div className="flex justify-center font-bold items-center text-xs text-socials-gray border-1 rounded-4xl w-4 h-4 bg-white border-transparent">
-              t
-            </div>
-            <div className="flex justify-center font-bold items-center text-xs text-socials-gray border-1 rounded-4xl w-4 h-4 bg-white border-transparent">
-              f
-            </div>
-            <div className="flex justify-center font-bold items-center text-xs text-socials-gray border-1 rounded-4xl w-4 h-4 bg-white border-transparent">
-              p
-            </div>
-            <div className="flex justify-center font-bold items-center text-xs text-socials-gray border-1 rounded-4xl w-4 h-4 bg-white border-transparent">
-              @
-            </div>
+
+          {/* Social Icons */}
+          <div className="flex items-center px-[60px] py-[10px] bg-cyan-400/50">
+            <a
+              href="https://twitter.com"
+              className="text-white text-[14px] transition-colors duration-500 hover:text-black"
+            >
+              <i className="fab fa-twitter" aria-hidden="true"></i>
+              <span className="sr-only">Twitter</span>
+            </a>
+            <a
+              href="https://facebook.com"
+              className="ml-5 text-white text-[14px] transition-colors duration-500 hover:text-black"
+            >
+              <i className="fab fa-facebook" aria-hidden="true"></i>
+              <span className="sr-only">Facebook</span>
+            </a>
+            <a
+              href="https://pinterest.com"
+              className="ml-5 text-white text-[14px] transition-colors duration-500 hover:text-black"
+            >
+              <i className="fab fa-pinterest-p" aria-hidden="true"></i>
+              <span className="sr-only">Pinterest</span>
+            </a>
+            <a
+              href="https://instagram.com"
+              className="ml-5 text-white text-[14px] transition-colors duration-500 hover:text-black"
+            >
+              <i className="fab fa-instagram" aria-hidden="true"></i>
+              <span className="sr-only">Instagram</span>
+            </a>
           </div>
         </div>
       </div>
+
       {/* Second Navigation bar*/}
       <div className="flex flex-row justify-between items-center pr-6 border-2 border-green-600">
         {/* Logo */}
@@ -57,7 +105,7 @@ export default function Navigation() {
 
         {/* Navigation Links */}
         <div className="flex items-center gap-6 border-2 border-green-600">
-          <nav className="flex items-center gap-10">
+          <nav className="flex items-center gap-8">
             <CustomLink href="/home">Home</CustomLink>
             <CustomLink href="/about">About</CustomLink>
             <CustomLink href="/pages">Pages</CustomLink>
