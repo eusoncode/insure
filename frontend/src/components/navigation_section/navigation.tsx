@@ -2,6 +2,8 @@ import CustomLink from "@/lib/Helper_function/links";
 import Image from "next/image";
 import logo from "@/assets/logo-light.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import phone_wave2 from "@/assets/phone-wave2.png";
+import search_icon from "@/assets/search_icon.png";
 
 export default function Navigation() {
   return (
@@ -92,19 +94,19 @@ export default function Navigation() {
       </div>
 
       {/* Second Navigation bar*/}
-      <div className="flex flex-row justify-between items-center relative pr-6 border-2 border-green-600">
+      <div className="flex flex-row justify-between items-center relative pr-6">
         {/* Logo */}
-        <div>
+        <div className="pr-60">
           <CustomLink
-            href="/home"
-            className="flex max-w-3xs p-8 max-h-screen bg-custom-blue border-2 border-green-600"
+            href="#"
+            className="flex max-w-3xs p-6 max-h-screen bg-custom-blue"
           >
-            <Image src={logo} alt="logo" priority width={700} />
+            <Image src={logo} alt="logo" priority width={500} />
           </CustomLink>
         </div>
 
         {/* Navigation Links */}
-        <div className="flex items-center gap-6 border-2 border-green-600">
+        <div className="flex items-center gap-6">
           <nav className="ml-0 mr-0 hidden md:flex">
             <ul className="flex items-center list-none m-0 p-0">
               {/* <!-- Home with Mega Menu --> */}
@@ -126,12 +128,27 @@ export default function Navigation() {
                             className="w-full transition duration-500 hover:blur-sm"
                           />
                           <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center gap-2 opacity-0 transform scale-y-0 transition-all">
-                            <a href="index.html" className="bg-base-didi text-white text-sm font-bold px-6 py-2">Multi Page</a>
-                            <a href="index-one-page.html" className="bg-base-didi text-white text-sm font-bold px-6 py-2">One Page</a>
+                            <a
+                              href="index.html"
+                              className="bg-base-didi text-white text-sm font-bold px-6 py-2"
+                            >
+                              Multi Page
+                            </a>
+                            <a
+                              href="index-one-page.html"
+                              className="bg-base-didi text-white text-sm font-bold px-6 py-2"
+                            >
+                              One Page
+                            </a>
                           </div>
                         </div>
                         <h3 className="text-custom-blue text-sm font-medium mt-4 pb-4">
-                          <a href="index.html" className="transition-all hover:underline">Home Page 01</a>
+                          <a
+                            href="index.html"
+                            className="transition-all hover:underline"
+                          >
+                            Home Page 01
+                          </a>
                         </h3>
                       </div>
                     </div>
@@ -151,67 +168,185 @@ export default function Navigation() {
 
               {/* <!-- Pages Dropdown --> */}
               <li className="ml-[61px] pt-9 pb-9 relative">
-                <a href="#" className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi">Pages</a>
+                <a
+                  href="#"
+                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi"
+                >
+                  Pages
+                </a>
                 <ul className="absolute top-full left-[-25px] z-50 bg-white shadow-xl p-4 w-[270px] flex flex-col opacity-0 invisible transform scale-y-0 transition-all">
-                  <li><a href="team.html" className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all">Team</a></li>
-                  <li><a href="faq.html" className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all">FAQs</a></li>
-                  <li><a href="login.html" className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all">Login</a></li>
+                  <li>
+                    <a
+                      href="team.html"
+                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Team
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="faq.html"
+                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      FAQs
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="login.html"
+                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Login
+                    </a>
+                  </li>
                 </ul>
               </li>
 
               {/* <!-- Insurance Dropdown --> */}
               <li className="ml-[61px] pt-9 pb-9 relative">
-                <a href="#" className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi">Insurance</a>
+                <a
+                  href="#"
+                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi"
+                >
+                  Insurance
+                </a>
                 <ul className="absolute top-full left-[-25px] z-50 bg-white shadow-xl p-4 w-[270px] flex flex-col opacity-0 invisible transform scale-y-0 transition-all">
-                  <li><a href="insurance.html" className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all">Insurance</a></li>
-                  <li><a href="car-insurance.html" className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all">Car insurance</a></li>
-                  <li><a href="life-insurance.html" className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all">Life insurance</a></li>
-                  <li><a href="health-insurance.html" className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all">Health insurance</a></li>
+                  <li>
+                    <a
+                      href="insurance.html"
+                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Insurance
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="car-insurance.html"
+                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Car insurance
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="life-insurance.html"
+                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Life insurance
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="health-insurance.html"
+                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Health insurance
+                    </a>
+                  </li>
                 </ul>
               </li>
 
               {/* <!-- Portfolio Dropdown --> */}
               <li className="ml-[61px] pt-9 pb-9 relative">
-                <a href="#" className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi">Portfolio</a>
+                <a
+                  href="#"
+                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi"
+                >
+                  Portfolio
+                </a>
                 <ul className="absolute top-full left-[-25px] z-50 bg-white shadow-xl p-4 w-[270px] flex flex-col opacity-0 invisible transform scale-y-0 transition-all">
-                  <li><a href="portfolio.html" className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all">Portfolio</a></li>
-                  <li><a href="portfolio-carousel.html" className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all">Portfolio Carousel</a></li>
-                  <li><a href="portfolio-details.html" className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all">Portfolio Details</a></li>
+                  <li>
+                    <a
+                      href="portfolio.html"
+                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Portfolio
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="portfolio-carousel.html"
+                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Portfolio Carousel
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="portfolio-details.html"
+                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Portfolio Details
+                    </a>
+                  </li>
                 </ul>
               </li>
 
               {/* <!-- News Dropdown --> */}
               <li className="ml-[61px] pt-9 pb-9 relative">
-                <a href="#" className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi">News</a>
+                <a
+                  href="#"
+                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi"
+                >
+                  News
+                </a>
                 <ul className="absolute top-full left-[-25px] z-50 bg-white shadow-xl p-4 w-[270px] flex flex-col opacity-0 invisible transform scale-y-0 transition-all">
-                  <li><a href="blog-grid.html" className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all">News Grid</a></li>
-                  <li><a href="blog-carousel.html" className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all">News Carousel</a></li>
-                  <li><a href="blog-details.html" className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all">News Details</a></li>
+                  <li>
+                    <a
+                      href="blog-grid.html"
+                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      News Grid
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="blog-carousel.html"
+                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      News Carousel
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="blog-details.html"
+                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      News Details
+                    </a>
+                  </li>
                 </ul>
               </li>
 
               {/* <!-- Contact --> */}
               <li className="ml-[61px] pt-9 pb-9 relative">
-                <a href="contact.html" className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi">Contact</a>
+                <a
+                  href="contact.html"
+                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi"
+                >
+                  Contact
+                </a>
               </li>
             </ul>
           </nav>
-
         </div>
 
-        <div className="flex flex-row justify-between items-center gap-20 border-2 border-green-600">
+        <div className="flex flex-row justify-between items-center">
           {/* Search button */}
           <a
             href="#"
-            className="hidden md:flex items-center text-[24px] text-custom-blue px-5 ml-10 mr-7 border-l border-gray-300"
+            className="hidden md:flex items-center text-[24px] text-custom-blue px-5 mr-2 border-l border-gray-300"
           >
-            <i className="icon-magnifying-glass"></i>
-            <span className="sr-only">Search</span>
+            <Image
+              src={search_icon}
+              alt="search_icon"
+              width={25}
+            />
           </a>
 
           {/* Quote */}
           <a
-            href="contact.html"
+            href="#"
             className="hidden md:inline-block bg-custom-blue text-white font-bold px-6 py-4 relative"
           >
             Get a Quote
@@ -223,15 +358,20 @@ export default function Navigation() {
         </div>
 
         {/* Search button */}
-        <a
-          href="tel:+92(003)68-0900"
-          className="hidden md:flex items-center  border-2 border-green-600"
-        >
-          <i className="icon-calling w-[50px] h-[50px] text-[25px] flex items-center justify-center border border-gray-300 rounded-full text-custom-blue mr-2 transition-all"></i>
-          <span className="text-sm font-medium text-gray-500 leading-tight">
+        <a href="#" className="hidden md:flex items-center mr-7">
+          <span className=" icon-calling relative group w-[50px] h-[50px] leading-[50px] text- inline-block rounded-full mr-[10px] border border-[#e0ddea] text-[25px] text-custom-blue transition-all hover:bg-custom-blue hover:text-white hover:border-transparent">
+            <Image
+              src={phone_wave2}
+              alt="phone-wave2"
+              width={25}
+              className="absolute inset-0 m-auto object-contain pointer-events-none z-0 group-hover:invert group-hover:brightness-0 transition duration-300"
+            />
+          </span>
+
+          <span className="text-md font-medium text-gray-500 leading-tight">
             Call experts
             <br />
-            <b className="text-[16px] text-custom-blue inline-block mt-1 hover:underline transition-all">
+            <b className="text-[16px] text-custom-blue inline-block mt-1 hover:underline hover:text-base-didi transition-all">
               +92 (003) 68-0900
             </b>
           </span>
