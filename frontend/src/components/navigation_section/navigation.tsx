@@ -96,7 +96,7 @@ export default function Navigation() {
       {/* Second Navigation bar*/}
       <div className="flex flex-row justify-between items-center relative pr-6">
         {/* Logo */}
-        <div className="pr-60">
+        <div className="pr-58">
           <CustomLink
             href="#"
             className="flex max-w-3xs p-6 max-h-screen bg-custom-blue"
@@ -106,14 +106,14 @@ export default function Navigation() {
         </div>
 
         {/* Navigation Links */}
-        <div className="flex items-center gap-6 pr-25">
+        <div className="flex items-center gap-6 ml-30">
           <nav className="ml-0 mr-0 hidden md:flex">
             <ul className="flex items-center list-none m-0 p-0">
               {/* <!-- Home with Mega Menu --> */}
               <li className="relative pt-9 pb-9">
                 <a
                   href="index.html"
-                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi"
+                  className="flex items-center text-custom-blue font-medium text-[16px] transition-all hover:text-base-didi"
                 >
                   Home
                 </a>
@@ -160,7 +160,7 @@ export default function Navigation() {
               <li className="ml-[61px] pt-9 pb-9 relative">
                 <a
                   href="about.html"
-                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi"
+                  className="flex items-center text-custom-blue font-medium text-[16px] transition-all hover:text-base-didi"
                 >
                   About
                 </a>
@@ -170,7 +170,7 @@ export default function Navigation() {
               <li className="ml-[61px] pt-9 pb-9 relative">
                 <a
                   href="#"
-                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi"
+                  className="flex items-center text-custom-blue font-medium text-[16px] transition-all hover:text-base-didi"
                 >
                   Pages
                 </a>
@@ -178,7 +178,7 @@ export default function Navigation() {
                   <li>
                     <a
                       href="team.html"
-                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                      className="block px-5 py-2 text-sm font-medium text-custom-blue hover:bg-gray-100 hover:text-black transition-all"
                     >
                       Team
                     </a>
@@ -186,7 +186,7 @@ export default function Navigation() {
                   <li>
                     <a
                       href="faq.html"
-                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                      className="block px-5 py-2 text-sm font-medium text-custom-blue hover:bg-gray-100 hover:text-black transition-all"
                     >
                       FAQs
                     </a>
@@ -194,7 +194,7 @@ export default function Navigation() {
                   <li>
                     <a
                       href="login.html"
-                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                      className="block px-5 py-2 text-sm font-medium text-custom-blue hover:bg-gray-100 hover:text-black transition-all"
                     >
                       Login
                     </a>
@@ -206,7 +206,7 @@ export default function Navigation() {
               <li className="ml-[61px] pt-9 pb-9 relative">
                 <a
                   href="#"
-                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi"
+                  className="flex items-center text-custom-blue font-medium text-[16px] transition-all hover:text-base-didi"
                 >
                   Insurance
                 </a>
@@ -250,7 +250,7 @@ export default function Navigation() {
               <li className="ml-[61px] pt-9 pb-9 relative">
                 <a
                   href="#"
-                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi"
+                  className="flex items-center text-custom-blue font-medium text-[16px] transition-all hover:text-base-didi"
                 >
                   Portfolio
                 </a>
@@ -286,7 +286,7 @@ export default function Navigation() {
               <li className="ml-[61px] pt-9 pb-9 relative">
                 <a
                   href="#"
-                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi"
+                  className="flex items-center text-custom-blue font-medium text-[16px] transition-all hover:text-base-didi"
                 >
                   News
                 </a>
@@ -322,7 +322,7 @@ export default function Navigation() {
               <li className="ml-[61px] pt-9 pb-9 relative">
                 <a
                   href="contact.html"
-                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi"
+                  className="flex items-center text-custom-blue font-medium text-[16px] transition-all hover:text-base-didi"
                 >
                   Contact
                 </a>
@@ -331,7 +331,7 @@ export default function Navigation() {
           </nav>
         </div>
 
-        <div className="flex flex-row justify-between items-center">
+        <div className="flex flex-row justify-between items-center ml-12">
           {/* Search button */}
           <a
             href="#"
@@ -350,8 +350,8 @@ export default function Navigation() {
           </a>
         </div>
 
-        {/* Search button */}
-        <a href="#" className="hidden md:flex items-center mr-7">
+        {/* Call expert button */}
+        <a href="#" className="hidden md:flex items-center ml-6 mr-7">
           <span className=" relative group w-[50px] h-[50px] leading-[50px] text- inline-block rounded-full mr-[10px] border border-[#e0ddea] text-[25px] text-custom-blue transition-all hover:bg-custom-blue hover:text-white hover:border-transparent">
             <Image
               src={phone_wave2}
