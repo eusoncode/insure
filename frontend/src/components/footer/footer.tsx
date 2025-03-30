@@ -4,7 +4,7 @@ import logo from "@/assets/logo-light.png";
 
 export default function Footer() {
   return (
-    <footer className="flex justify-center align-center min-h-155 bg-custom-blue text-white py-10">
+    <footer className="flex justify-center align-center min-h-155 bg-custom-blue text-white py border border-green-600">
       <div className="flex flex-col justify-between border-2 border-transparent">
         {/* Footer box for further inqury */}
         <div className="flex flex-row mt-16 space-x-8 justify-between items-start space-y-0">
@@ -19,19 +19,32 @@ export default function Footer() {
             <h3 className="flex flex-wrap font-sans font-bold text-xl">
               Insurance that reflects the way <br /> you live your life.
             </h3>
-            <div className="flex flex-row mt-4 space-x-6">
-              <div className="flex justify-center items-center text-lg text-white border-1 rounded-4xl w-8 h-8 bg-socials-gray border-transparent">
-                t
-              </div>
-              <div className="flex justify-center items-center text-lg text-white border-1 rounded-4xl w-8 h-8 bg-socials-gray border-transparent">
-                f
-              </div>
-              <div className="flex justify-center items-center text-lg text-white border-1 rounded-4xl w-8 h-8 bg-socials-gray border-transparent">
-                p
-              </div>
-              <div className="flex justify-center items-center text-lg text-white border-1 rounded-4xl w-8 h-8 bg-socials-gray border-transparent">
-                @
-              </div>
+            {/* Social Icons */}
+            <div className="flex items-center mt-4 space-x-4">
+              <a
+                href="https://twitter.com"
+                className="flex justify-center items-center text-[14px] w-[40px] h-[40px] text-white bg-custom-dark-dol-blue rounded-full transition duration-300 hover:bg-base-didi hover:text-white no-underline"
+              >
+                <i className="fab fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://facebook.com"
+                className="flex justify-center items-center text-[14px] w-[40px] h-[40px] text-white bg-custom-dark-dol-blue rounded-full transition duration-300 hover:bg-base-didi hover:text-white no-underline"
+              >
+                <i className="fab fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://pinterest.com"
+                className="flex justify-center items-center text-[14px] w-[40px] h-[40px] text-white bg-custom-dark-dol-blue rounded-full transition duration-300 hover:bg-base-didi hover:text-white no-underline"
+              >
+                <i className="fab fa-pinterest-p" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://instagram.com"
+                className="flex justify-center items-center text-[14px] w-[40px] h-[40px] text-white bg-custom-dark-dol-blue rounded-full transition duration-300 hover:bg-base-didi hover:text-white no-underline"
+              >
+                <i className="fab fa-instagram" aria-hidden="true"></i>
+              </a>
             </div>
           </div>
 
@@ -96,7 +109,7 @@ export default function Footer() {
                 type="submit"
                 className="px-1 py-4 bg-base-didi border-2 border-blue-600"
               >
-                <span>Submit</span>
+                <span className="px-4 fas fa-paper-plane"></span>
               </button>
             </form>
           </div>
