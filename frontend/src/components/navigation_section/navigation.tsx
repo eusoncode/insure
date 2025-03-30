@@ -106,7 +106,7 @@ export default function Navigation() {
         </div>
 
         {/* Navigation Links */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 pr-25">
           <nav className="ml-0 mr-0 hidden md:flex">
             <ul className="flex items-center list-none m-0 p-0">
               {/* <!-- Home with Mega Menu --> */}
@@ -337,29 +337,22 @@ export default function Navigation() {
             href="#"
             className="hidden md:flex items-center text-[24px] text-custom-blue px-5 mr-2 border-l border-gray-300"
           >
-            <Image
-              src={search_icon}
-              alt="search_icon"
-              width={25}
-            />
+            <Image src={search_icon} alt="search_icon" width={25} />
           </a>
 
           {/* Quote */}
           <a
             href="#"
-            className="hidden md:inline-block bg-custom-blue text-white font-bold px-6 py-4 relative"
+            className="relative group inline-block overflow-hidden bg-custom-blue text-white font-bold px-6 py-3.5 transition-colors duration-500 hover:bg-base-didi"
           >
             Get a Quote
-            <em
-              className="absolute w-0 h-0 bg-base-didi rounded-full transition-all z-[-1]"
-              style={{ top: "12px", left: "34px" }}
-            ></em>
+            <em className="absolute top-1/2 left-1/2 w-0 h-0 rounded-full bg-base-didi z-[-1] transition-all duration-500 ease-in-out group-hover:w-[500px] group-hover:h-[500px] transform -translate-x-1/2 -translate-y-1/2"></em>
           </a>
         </div>
 
         {/* Search button */}
         <a href="#" className="hidden md:flex items-center mr-7">
-          <span className=" icon-calling relative group w-[50px] h-[50px] leading-[50px] text- inline-block rounded-full mr-[10px] border border-[#e0ddea] text-[25px] text-custom-blue transition-all hover:bg-custom-blue hover:text-white hover:border-transparent">
+          <span className=" relative group w-[50px] h-[50px] leading-[50px] text- inline-block rounded-full mr-[10px] border border-[#e0ddea] text-[25px] text-custom-blue transition-all hover:bg-custom-blue hover:text-white hover:border-transparent">
             <Image
               src={phone_wave2}
               alt="phone-wave2"
