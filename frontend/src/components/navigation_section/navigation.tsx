@@ -110,48 +110,64 @@ export default function Navigation() {
           <nav className="ml-0 mr-0 hidden md:flex">
             <ul className="flex items-center list-none m-0 p-0">
               {/* <!-- Home with Mega Menu --> */}
-              <li className="relative pt-9 pb-9">
-                <a
-                  href="index.html"
-                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi"
-                >
+              <li className="group relative ml-[61px] pt-9 pb-9">
+                <a href="index.html" className="flex items-center text-gray-500 font-medium text-[16px] transition-all duration-500 group-hover:text-base-didi">
                   Home
                 </a>
-                <ul className="absolute top-full left-0 right-0 z-[99] opacity-0 invisible transform scale-y-0 transition-all duration-500 bg-white p-4 shadow-xl">
-                  <li className="p-2">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                      <div className="bg-white text-center shadow-md transition-transform hover:-translate-y-2">
-                        <div className="relative overflow-hidden">
-                          <img
-                            src="/assets/images/home-showcase/home-showcase-1.jpg"
-                            alt=""
-                            className="w-full transition duration-500 hover:blur-sm"
-                          />
-                          <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center gap-2 opacity-0 transform scale-y-0 transition-all">
-                            <a
-                              href="index.html"
-                              className="bg-base-didi text-white text-sm font-bold px-6 py-2"
-                            >
-                              Multi Page
-                            </a>
-                            <a
-                              href="index-one-page.html"
-                              className="bg-base-didi text-white text-sm font-bold px-6 py-2"
-                            >
-                              One Page
-                            </a>
-                          </div>
-                        </div>
-                        <h3 className="text-custom-blue text-sm font-medium mt-4 pb-4">
-                          <a
-                            href="index.html"
-                            className="transition-all hover:underline"
-                          >
-                            Home Page 01
-                          </a>
-                        </h3>
+                <ul className="absolute top-full left-0 right-0 z-50 bg-white shadow-xl p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 opacity-0 invisible scale-y-0 origin-top transition-all duration-500 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
+                  {/*Card 1*/}
+                  <li className="bg-white text-center shadow-md transition-transform hover:-translate-y-2">
+                    <div className="relative overflow-hidden">
+                      <img src="assets/images/home-showcase/home-showcase-1.jpg" alt="Home Page 01" className="w-full transition duration-500 hover:blur-sm" />
+                      <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center gap-2 opacity-0 transform scale-y-0 transition-all group-hover:scale-y-100 group-hover:opacity-100">
+                        <a href="index.html" className="bg-base-didi text-white text-sm font-bold px-6 py-2 rounded">Multi Page</a>
+                        <a href="index-one-page.html" className="bg-base-didi text-white text-sm font-bold px-6 py-2 rounded">One Page</a>
                       </div>
                     </div>
+                    <h3 className="text-custom-blue text-sm font-medium mt-4 pb-4">
+                      <a href="index.html" className="transition-all hover:underline">Home Page 01</a>
+                    </h3>
+                  </li>
+
+                  {/*Card 2*/}
+                  <li className="bg-white text-center shadow-md transition-transform hover:-translate-y-2">
+                    <div className="relative overflow-hidden">
+                      <img src="assets/images/home-showcase/home-showcase-2.jpg" alt="Home Page 02" className="w-full transition duration-500 hover:blur-sm" />
+                      <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center gap-2 opacity-0 transform scale-y-0 transition-all group-hover:scale-y-100 group-hover:opacity-100">
+                        <a href="index-2.html" className="bg-base-didi text-white text-sm font-bold px-6 py-2 rounded">Multi Page</a>
+                        <a href="index-2-one-page.html" className="bg-base-didi text-white text-sm font-bold px-6 py-2 rounded">One Page</a>
+                      </div>
+                    </div>
+                    <h3 className="text-custom-blue text-sm font-medium mt-4 pb-4">
+                      <a href="index-2.html" className="transition-all hover:underline">Home Page 02</a>
+                    </h3>
+                  </li>
+
+                  {/*Card 3*/}
+                  <li className="bg-white text-center shadow-md transition-transform hover:-translate-y-2">
+                    <div className="relative overflow-hidden">
+                      <img src="assets/images/home-showcase/home-showcase-3.jpg" alt="Home Page 03" className="w-full transition duration-500 hover:blur-sm" />
+                      <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center gap-2 opacity-0 transform scale-y-0 transition-all group-hover:scale-y-100 group-hover:opacity-100">
+                        <a href="index-3.html" className="bg-base-didi text-white text-sm font-bold px-6 py-2 rounded">Multi Page</a>
+                        <a href="index-3-one-page.html" className="bg-base-didi text-white text-sm font-bold px-6 py-2 rounded">One Page</a>
+                      </div>
+                    </div>
+                    <h3 className="text-custom-blue text-sm font-medium mt-4 pb-4">
+                      <a href="index-3.html" className="transition-all hover:underline">Home Page 03</a>
+                    </h3>
+                  </li>
+
+                  {/*Card 4*/}
+                  <li className="bg-white text-center shadow-md transition-transform hover:-translate-y-2">
+                    <div className="relative overflow-hidden">
+                      <img src="assets/images/home-showcase/home-showcase-4.jpg" alt="Home Box" className="w-full transition duration-500 hover:blur-sm" />
+                      <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center gap-2 opacity-0 transform scale-y-0 transition-all group-hover:scale-y-100 group-hover:opacity-100">
+                        <a href="index-boxed.html" className="bg-base-didi text-white text-sm font-bold px-6 py-2 rounded">View Page</a>
+                      </div>
+                    </div>
+                    <h3 className="text-custom-blue text-sm font-medium mt-4 pb-4">
+                      <a href="index-boxed.html" className="transition-all hover:underline">Home Box</a>
+                    </h3>
                   </li>
                 </ul>
               </li>
