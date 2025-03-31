@@ -113,7 +113,7 @@ export default function Navigation() {
               <li className="relative pt-9 pb-9">
                 <a
                   href="index.html"
-                  className="flex items-center text-custom-blue font-medium text-[16px] transition-all hover:text-base-didi"
+                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi"
                 >
                   Home
                 </a>
@@ -156,173 +156,384 @@ export default function Navigation() {
                 </ul>
               </li>
 
-              {/* <!-- About --> */}
+              {/* About*/}
               <li className="ml-[61px] pt-9 pb-9 relative">
                 <a
                   href="about.html"
-                  className="flex items-center text-custom-blue font-medium text-[16px] transition-all hover:text-base-didi"
+                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi"
                 >
                   About
                 </a>
               </li>
 
-              {/* <!-- Pages Dropdown --> */}
-              <li className="ml-[61px] pt-9 pb-9 relative">
+              {/* Pages Dropdown*/}
+              <li className="group ml-[61px] pt-9 pb-9 relative">
                 <a
                   href="#"
-                  className="flex items-center text-custom-blue font-medium text-[16px] transition-all hover:text-base-didi"
+                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi"
                 >
                   Pages
                 </a>
-                <ul className="absolute top-full left-[-25px] z-50 bg-white shadow-xl p-4 w-[270px] flex flex-col opacity-0 invisible transform scale-y-0 transition-all">
-                  <li>
+                <ul className="absolute top-full left-[-25px] space-y-2 z-50 bg-white shadow-xl p-4 w-[270px] flex flex-col opacity-0 invisible scale-y-0 transform origin-top transition-all duration-500 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:scale-y-100">
+                  <li className="relative group/pages">
                     <a
                       href="team.html"
-                      className="block px-5 py-2 text-sm font-medium text-custom-blue hover:bg-gray-100 hover:text-black transition-all"
+                      className="flex justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
                     >
                       Team
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/pages:opacity-100 group-hover/pages:visible group-hover/pages:scale-y-100"></div>
                     </a>
                   </li>
-                  <li>
-                    <a
-                      href="faq.html"
-                      className="block px-5 py-2 text-sm font-medium text-custom-blue hover:bg-gray-100 hover:text-black transition-all"
-                    >
-                      FAQs
-                    </a>
-                  </li>
-                  <li>
+                  <li className="relative group/pages">
                     <a
                       href="login.html"
-                      className="block px-5 py-2 text-sm font-medium text-custom-blue hover:bg-gray-100 hover:text-black transition-all"
+                      className="flex justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Team Carousel
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/pages:opacity-100 group-hover/pages:visible group-hover/pages:scale-y-100"></div>
+                    </a>
+                  </li>
+                  <li className="relative group/pages">
+                    <a
+                      href="team.html"
+                      className="flex flex-row justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Testimonal
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/pages:opacity-100 group-hover/pages:visible group-hover/pages:scale-y-100"></div>
+                    </a>
+                  </li>
+                  <li className="relative group/pages">
+                    <a
+                      href="faq.html"
+                      className="flex justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Testimonal Two
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/pages:opacity-100 group-hover/pages:visible group-hover/pages:scale-y-100"></div>
+                    </a>
+                  </li>
+                  <li className="relative group/pages">
+                    <a
+                      href="login.html"
+                      className="flex justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Testimonal Carousel
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/pages:opacity-100 group-hover/pages:visible group-hover/pages:scale-y-100"></div>
+                    </a>
+                  </li>
+                  <li className="relative group/pages">
+                    <a
+                      href="team.html"
+                      className="flex flex-row justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Testimonal Two Carousel
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/pages:opacity-100 group-hover/pages:visible group-hover/pages:scale-y-100"></div>
+                    </a>
+                  </li>
+                  <li className="relative group/pages">
+                    <a
+                      href="faq.html"
+                      className="flex justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      FAQs
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/pages:opacity-100 group-hover/pages:visible group-hover/pages:scale-y-100"></div>
+                    </a>
+                  </li>
+                  <li className="relative group/pages">
+                    <a
+                      href="login.html"
+                      className="flex justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
                     >
                       Login
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/pages:opacity-100 group-hover/pages:visible group-hover/pages:scale-y-100"></div>
+                    </a>
+                  </li>
+                  <li className="relative group/pages">
+                    <a
+                      href="login.html"
+                      className="flex justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      404 Error
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/pages:opacity-100 group-hover/pages:visible group-hover/pages:scale-y-100"></div>
                     </a>
                   </li>
                 </ul>
               </li>
 
-              {/* <!-- Insurance Dropdown --> */}
-              <li className="ml-[61px] pt-9 pb-9 relative">
+              {/* <Insurance Dropdown */}
+              <li className="group ml-[61px] pt-9 pb-9 relative">
                 <a
                   href="#"
-                  className="flex items-center text-custom-blue font-medium text-[16px] transition-all hover:text-base-didi"
+                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi"
                 >
                   Insurance
                 </a>
-                <ul className="absolute top-full left-[-25px] z-50 bg-white shadow-xl p-4 w-[270px] flex flex-col opacity-0 invisible transform scale-y-0 transition-all">
-                  <li>
+                <ul className="absolute top-full left-[-25px] space-y-2 z-50 bg-white shadow-xl p-4 w-[270px] flex flex-col opacity-0 invisible scale-y-0 transform origin-top transition-all duration-500 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:scale-y-100">
+                  <li className="relative group/insurance">
                     <a
                       href="insurance.html"
-                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                      className="flex flex-row justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
                     >
                       Insurance
+                      <div className="flex justify-between items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/insurance:opacity-100 group-hover/insurance:visible group-hover/insurance:scale-y-100"></div>
                     </a>
                   </li>
-                  <li>
-                    <a
-                      href="car-insurance.html"
-                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
-                    >
-                      Car insurance
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="life-insurance.html"
-                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
-                    >
-                      Life insurance
-                    </a>
-                  </li>
-                  <li>
+                  <li className="relative group/insurance">
                     <a
                       href="health-insurance.html"
-                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                      className="flex justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Insurance Two
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/insurance:opacity-100 group-hover/insurance:visible group-hover/insurance:scale-y-100"></div>
+                    </a>
+                  </li>
+                  <li className="relative group/insurance">
+                    <a
+                      href="health-insurance.html"
+                      className="flex justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Insurance Carousel
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/insurance:opacity-100 group-hover/insurance:visible group-hover/insurance:scale-y-100"></div>
+                    </a>
+                  </li>
+                  <li className="relative group/insurance">
+                    <a
+                      href="health-insurance.html"
+                      className="flex justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Insurance Carousel Two
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/insurance:opacity-100 group-hover/insurance:visible group-hover/insurance:scale-y-100"></div>
+                    </a>
+                  </li>
+                  <li className="relative group/insurance">
+                    <a
+                      href="car-insurance.html"
+                      className="flex justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Car insurance
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/insurance:opacity-100 group-hover/insurance:visible group-hover/insurance:scale-y-100"></div>
+                    </a>
+                  </li>
+                  <li className="relative group/insurance">
+                    <a
+                      href="life-insurance.html"
+                      className="flex justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Life insurance
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/insurance:opacity-100 group-hover/insurance:visible group-hover/insurance:scale-y-100"></div>
+                    </a>
+                  </li>
+                  <li className="relative group/insurance">
+                    <a
+                      href="health-insurance.html"
+                      className="flex justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Home insurance
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/insurance:opacity-100 group-hover/insurance:visible group-hover/insurance:scale-y-100"></div>
+                    </a>
+                  </li>
+                  <li className="relative group/insurance">
+                    <a
+                      href="health-insurance.html"
+                      className="flex justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
                     >
                       Health insurance
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/insurance:opacity-100 group-hover/insurance:visible group-hover/insurance:scale-y-100"></div>
+                    </a>
+                  </li>
+                  <li className="relative group/insurance">
+                    <a
+                      href="health-insurance.html"
+                      className="flex justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Business insurance
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/insurance:opacity-100 group-hover/insurance:visible group-hover/insurance:scale-y-100"></div>
+                    </a>
+                  </li>
+                  <li className="relative group/insurance">
+                    <a
+                      href="health-insurance.html"
+                      className="flex justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Fire insurance
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/insurance:opacity-100 group-hover/insurance:visible group-hover/insurance:scale-y-100"></div>
+                    </a>
+                  </li>
+                  <li className="relative group/insurance">
+                    <a
+                      href="health-insurance.html"
+                      className="flex justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Marriage insurance
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/insurance:opacity-100 group-hover/insurance:visible group-hover/insurance:scale-y-100"></div>
+                    </a>
+                  </li>
+                  <li className="relative group/insurance">
+                    <a
+                      href="health-insurance.html"
+                      className="flex justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                    >
+                      Travel insurance
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/insurance:opacity-100 group-hover/insurance:visible group-hover/insurance:scale-y-100"></div>
                     </a>
                   </li>
                 </ul>
               </li>
 
-              {/* <!-- Portfolio Dropdown --> */}
-              <li className="ml-[61px] pt-9 pb-9 relative">
+              {/* <Portfolio Dropdown*/}
+              <li className="group relative ml-[61px] pt-9 pb-9">
                 <a
                   href="#"
-                  className="flex items-center text-custom-blue font-medium text-[16px] transition-all hover:text-base-didi"
+                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all duration-500 group-hover:text-base-didi focus:text-base-didi"
                 >
                   Portfolio
                 </a>
-                <ul className="absolute top-full left-[-25px] z-50 bg-white shadow-xl p-4 w-[270px] flex flex-col opacity-0 invisible transform scale-y-0 transition-all">
-                  <li>
+
+                {/* Dropdown */}
+                <ul className="absolute top-full left-[-25px] z-50 w-[270px] bg-white shadow-xl p-4 flex-col space-y-2 opacity-0 invisible scale-y-0 origin-top transition-all duration-500 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:scale-y-100">
+                  {/* Portfolio */}
+                  <li className="relative group/details">
                     <a
-                      href="portfolio.html"
-                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                      href="#"
+                      className="flex flex-row justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 transition-all hover:bg-gray-100 hover:text-black"
                     >
                       Portfolio
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/details:opacity-100 group-hover/details:visible group-hover/details:scale-y-100"></div>
                     </a>
                   </li>
-                  <li>
+
+                  {/* Portfolio Carousel */}
+                  <li className="relative group/details">
                     <a
-                      href="portfolio-carousel.html"
-                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                      href="blog-carousel.html"
+                      className="flex flex-row justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
                     >
                       Portfolio Carousel
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/details:opacity-100 group-hover/details:visible group-hover/details:scale-y-100"></div>
                     </a>
                   </li>
-                  <li>
+
+                  {/* Portfolio Details */}
+                  <li className="relative group/details">
                     <a
-                      href="portfolio-details.html"
-                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                      href="#"
+                      className="flex flex-row justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 transition-all hover:bg-gray-100 hover:text-black"
                     >
-                      Portfolio Details
+                      Portfolio details
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/details:opacity-100 group-hover/details:visible group-hover/details:scale-y-100"></div>
                     </a>
                   </li>
                 </ul>
               </li>
 
-              {/* <!-- News Dropdown --> */}
-              <li className="ml-[61px] pt-9 pb-9 relative">
+              {/* News Dropdown*/}
+              <li className="group relative ml-[61px] pt-9 pb-9">
                 <a
                   href="#"
-                  className="flex items-center text-custom-blue font-medium text-[16px] transition-all hover:text-base-didi"
+                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all duration-500 group-hover:text-base-didi focus:text-base-didi"
                 >
                   News
                 </a>
-                <ul className="absolute top-full left-[-25px] z-50 bg-white shadow-xl p-4 w-[270px] flex flex-col opacity-0 invisible transform scale-y-0 transition-all">
-                  <li>
+
+                {/* Dropdown */}
+                <ul className="absolute top-full left-[-25px] z-50 w-[270px] bg-white shadow-xl p-4 flex-col space-y-2 opacity-0 invisible scale-y-0 origin-top transition-all duration-500 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:scale-y-100">
+                  {/* News Grid */}
+                  <li className="relative group/news">
                     <a
-                      href="blog-grid.html"
-                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                      href="#"
+                      className="flex flex-row justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 transition-all hover:bg-gray-100 hover:text-black"
                     >
-                      News Grid
+                      News grid
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/news:opacity-100 group-hover/news:visible group-hover/news:scale-y-100"></div>
                     </a>
+                    <ul className="absolute left-full top-0 mt-0 ml-6 w-[220px] bg-white shadow-lg p-3 space-y-2 opacity-0 invisible scale-y-0 origin-top-left transition-all duration-300 group-hover/news:opacity-100 group-hover/news:visible group-hover/news:scale-y-100">
+                      <li className="group/newssub1">
+                        <a
+                          href="#"
+                          className="flex flex-row justify-between items-center px-4 py-1 text-sm text-gray-500 hover:text-black hover:bg-gray-100"
+                        >
+                          No sidebar
+                          <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/newssub1:opacity-100 group-hover/newssub1:visible group-hover/newssub1:scale-y-100"></div>
+                        </a>
+                      </li>
+                      <li className="group/newssub2">
+                        <a
+                          href="#"
+                          className="flex flex-row justify-between items-center px-4 py-1 text-sm text-gray-500 hover:text-black hover:bg-gray-100"
+                        >
+                          Left sidebar
+                          <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/newssub2:opacity-100 group-hover/newssub2:visible group-hover/newssub2:scale-y-100"></div>
+                        </a>
+                      </li>
+                      <li className="group/newssub3">
+                        <a
+                          href="#"
+                          className="flex flex-row justify-between items-center px-4 py-1 text-sm text-gray-500 hover:text-black hover:bg-gray-100"
+                        >
+                          Right sidebar
+                          <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/newssub3:opacity-100 group-hover/newssub3:visible group-hover/newssub3:scale-y-100"></div>
+                        </a>
+                      </li>
+                    </ul>
                   </li>
-                  <li>
+
+                  {/* News Carousel */}
+                  <li className="relative group/news">
                     <a
                       href="blog-carousel.html"
-                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                      className="flex flex-row justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
                     >
                       News Carousel
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/news:opacity-100 group-hover/news:visible group-hover/news:scale-y-100"></div>
                     </a>
                   </li>
-                  <li>
+
+                  {/* News Details */}
+                  <li className="relative group/details">
                     <a
-                      href="blog-details.html"
-                      className="block px-5 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-black transition-all"
+                      href="#"
+                      className="flex flex-row justify-between items-center px-5 py-2 text-sm font-medium text-gray-500 transition-all hover:bg-gray-100 hover:text-black"
                     >
-                      News Details
+                      News details
+                      <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/details:opacity-100 group-hover/details:visible group-hover/details:scale-y-100"></div>
                     </a>
+                    <ul className="absolute left-full top-0 mt-0 ml-6 w-[220px] bg-white shadow-lg p-3 space-y-2 opacity-0 invisible scale-y-0 origin-top-left transition-all duration-300 group-hover/details:opacity-100 group-hover/details:visible group-hover/details:scale-y-100">
+                      <li className="group/detailssub1">
+                        <a
+                          href="#"
+                          className="flex flex-row justify-between items-center px-4 py-1 text-sm text-gray-500 hover:text-black hover:bg-gray-100"
+                        >
+                          No sidebar
+                          <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/detailssub1:opacity-100 group-hover/detailssub1:visible group-hover/detailssub1:scale-y-100"></div>
+                        </a>
+                      </li>
+                      <li className="group/detailssub2">
+                        <a
+                          href="#"
+                          className="flex flex-row justify-between items-center px-4 py-1 text-sm text-gray-500 hover:text-black hover:bg-gray-100"
+                        >
+                          Left sidebar
+                          <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/detailssub2:opacity-100 group-hover/detailssub2:visible group-hover/detailssub2:scale-y-100"></div>
+                        </a>
+                      </li>
+                      <li className="group/detailssub3">
+                        <a
+                          href="#"
+                          className="flex flex-row justify-between items-center px-4 py-1 text-sm text-gray-500 hover:text-black hover:bg-gray-100"
+                        >
+                          Right sidebar
+                          <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/detailssub3:opacity-100 group-hover/detailssub3:visible group-hover/detailssub3:scale-y-100"></div>
+                        </a>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </li>
 
-              {/* <!-- Contact --> */}
+              {/* Contact*/}
               <li className="ml-[61px] pt-9 pb-9 relative">
                 <a
                   href="contact.html"
-                  className="flex items-center text-custom-blue font-medium text-[16px] transition-all hover:text-base-didi"
+                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi"
                 >
                   Contact
                 </a>
@@ -331,11 +542,12 @@ export default function Navigation() {
           </nav>
         </div>
 
+        {/* Search and Quote section */}
         <div className="flex flex-row justify-between items-center ml-12">
           {/* Search button */}
           <a
             href="#"
-            className="hidden md:flex items-center text-[24px] text-custom-blue px-5 mr-2 border-l border-gray-300"
+            className="hidden md:flex items-center text-[24px] text-gray-500 px-5 mr-2 border-l border-gray-300"
           >
             <Image src={search_icon} alt="search_icon" width={25} />
           </a>
