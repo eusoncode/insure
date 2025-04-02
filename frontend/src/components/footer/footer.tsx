@@ -97,7 +97,7 @@ export default function Footer() {
             <form
               action="#"
               method="POST"
-              className="mx-auto mt-6 flex border-2 border-blue-600"
+              className="mx-auto mt-6 flex"
             >
               <input
                 type="email"
@@ -107,7 +107,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="px-1 py-4 bg-base-didi border-2 border-blue-600"
+                className="px-1 py-4 bg-base-didi"
               >
                 <span className="px-4 fas fa-paper-plane"></span>
               </button>
