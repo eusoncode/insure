@@ -58,13 +58,13 @@ export default function Footer() {
               88 Broklyn Golden Road Street, <br /> New York. USA
             </p>
             <div className="flex flex-col mt-6 justify-center items-start space-y-2">
-              <div className="flex flex-row space-x-4">
-                <i>@</i>
-                <p>+92(8800)-6930</p>
+              <div className="flex flex-row items-center space-x-4">
+                <i className="fas fa-phone text-base-didi"></i>
+                <i>+92(8800)-6930</i>
               </div>
-              <div className="flex flex-row space-x-4">
-                <i>@</i>
-                <p>needhelp@company.com</p>
+              <div className="flex flex-row items-center space-x-4">
+                <i className="fas fa-envelope text-base-didi"></i>
+                <i>needhelp@company.com</i>
               </div>
             </div>
           </div>

@@ -122,7 +122,7 @@ export default function Navigation() {
                 >
                   Home
                 </a>
-                <ul className="flex items-center absolute overflow-hidden top-full left-[-200px] right-auto z-50 bg-white shadow-xl min-w-287 gap-10 opacity-0 invisible scale-y-0 origin-top transition-all duration-500 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
+                <ul className="flex items-center absolute overflow-hidden top-full left-[-200px] right-auto z-50 bg-white shadow-xl min-w-287 gap-10 opacity-0 invisible scale-y-0 origin-top transition-all duration-800 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
                   {/*Card 1*/}
                   <li className="group/card1 bg-white text-center ml-10 mt-10 mb-4 w-60 h-85 transition-transform hover:-translate-y-2 overflow-hidden">
                     <div className="relative overflow-hidden">
