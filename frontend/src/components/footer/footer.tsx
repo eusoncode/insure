@@ -60,7 +60,7 @@ export default function Footer() {
             <div className="flex flex-col mt-6 justify-center items-start space-y-2">
               <div className="flex flex-row items-center space-x-4">
                 <i className="fas fa-phone text-base-didi"></i>
-                <i>+92(8800)-6930</i>
+                <i>+ 92 ( 8800 ) - 6930</i>
               </div>
               <div className="flex flex-row items-center space-x-4">
                 <i className="fas fa-envelope text-base-didi"></i>
