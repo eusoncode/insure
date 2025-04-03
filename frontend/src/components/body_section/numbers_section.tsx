@@ -1,6 +1,6 @@
 export default function Numbers_section() {
   return (
-    <section className="container">
+    <section className="border border-green-600">
       <div>
         <p>Numbers_section Block</p>
       </div>

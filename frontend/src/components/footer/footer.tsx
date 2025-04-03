@@ -4,7 +4,7 @@ import logo from "@/assets/logo-light.png";
 
 export default function Footer() {
   return (
-    <footer className="flex justify-center align-center min-h-140 bg-custom-blue text-white">
+    <footer className="flex justify-center align-center min-h-140 bg-custom-blue text-white border-6 border-amber-500">
       <div className="flex flex-col justify-between border-2 border-transparent mt-8">
         {/* Footer box for further inqury */}
         <div className="flex flex-row mt-16 space-x-8 justify-between items-start space-y-0">

@@ -1,11 +1,13 @@
-
+import Image from "next/image"
+import background_image from '@/assets/main-slder-shape-1e.png';
 export default function Insurance_section() {
   return (
-    <section className="container">
-      <div className="cta-one__content">
-        <span className="cta-one__tagline">Quisque vel ortor</span>
-        <h3 className="cta-one__title">Start reporting or tracking your claims</h3>
-      </div>
+    <section className="border-4 border-red-600 p-0">
+      <div className="flex flex-row items-center">
+        <div className="">
+          <Image src={background_image} alt="" width={1030} />
+        </div>
+      </div>      
     </section>
   );
 }
