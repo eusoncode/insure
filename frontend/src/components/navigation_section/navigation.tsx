@@ -22,7 +22,7 @@ export default function Navigation() {
             <a href="#" className="font-bold no-underline hover:underline">
               30 Commercial Road Fratton, Australia
             </a>
-          </li>
+          </li>          
           <li className="flex items-center text-[15px] space-x-2 font-medium text-white transition-colors duration-500 hover:text-[#2b2b5e]">
             <i className="fas fa-envelope text-white text-[15px] mr-2"></i>
             <a
