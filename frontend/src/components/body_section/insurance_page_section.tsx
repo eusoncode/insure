@@ -1,8 +1,13 @@
 import Image from "next/image"
 import background_image from '@/assets/main-slder-shape-1e.png';
 import family_image from "@/assets/main-slder-shape-2e.png";
-import arrow_shape from "@/assets/arrow-shape.png"
-import '../../styles/HeroSection.css'
+import arrow_shape from "@/assets/arrow-shape.png";
+import '../../styles/HeroSection.css';
+import '../../styles/car.css';
+import "../../styles/house.css";
+import "../../styles/family.css";
+import "../../styles/right-arrow.css";
+import "../../styles/left-arrow.css";
 
 
 // export default function Insurance_section() {
@@ -69,10 +74,10 @@ export default function HeroSection() {
         <div className="slider-wrap">
           <div className="social-icons">
             <span className="icon-box_2">
-              <i className="icon-family-1"></i>
+              <i className="icon-arrow-left2"></i>
             </span>
             <span className="icon-box_2">
-              <i className="icon-car"></i>
+              <i className="icon-arrow-right2"></i>
             </span>
           </div>
 
@@ -99,20 +104,20 @@ export default function HeroSection() {
 
           <div className="social-icons">
             <span className="icon-box">
-              <i className="icon-family-1"></i>
+              <i className="icon-family_restroom"></i>
             </span>
             <span className="icon-box">
-              <i className="icon-car"></i>
+              <i className="icon-local_car_wash"></i>
             </span>
             <span className="icon-box">
-              <i className="icon-home-insurance"></i>
+              <i className="icon-home-outline"></i>
             </span>
           </div>
         </div>
       </div>
 
       <div>
-        <Image src={family_image} alt="" height={850} />
+        <Image src={family_image} alt="" width={1050} height={1050} />
       </div>
     </section>
   );

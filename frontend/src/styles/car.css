@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/fonts/car/icomoon.eot?wgo1jo');
+  src:  url('/fonts/car/icomoon.eot?wgo1jo#iefix') format('embedded-opentype'),
+    url('/fonts/car/icomoon.ttf?wgo1jo') format('truetype'),
+    url('/fonts/car/icomoon.woff?wgo1jo') format('woff'),
+    url('/fonts/car/icomoon.svg?wgo1jo#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-local_car_wash:before {
+  content: "\e901";
+}
+.icon-search:before {
+  content: "\e986";
+}
