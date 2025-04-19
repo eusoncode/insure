@@ -4,7 +4,7 @@ import logo from "@/assets/logo-light.png";
 
 export default function Footer() {
   return (
-    <footer className="flex justify-center align-center min-h-140 bg-custom-blue text-white border-6 border-amber-500">
+    <footer className="flex justify-center align-center max-h-140 bg-custom-blue text-white">
       <div className="flex flex-col justify-between border-2 border-transparent mt-8">
         {/* Footer box for further inqury */}
         <div className="flex flex-row mt-16 space-x-8 justify-between items-start space-y-0">
@@ -94,28 +94,21 @@ export default function Footer() {
             <p className="font-sans text-insure-text-dark">
               Subscribe our newsletter to get <br /> our latest update & news.
             </p>
-            <form
-              action="#"
-              method="POST"
-              className="mx-auto mt-6 flex"
-            >
+            <form action="#" method="POST" className="mx-auto mt-6 flex">
               <input
                 type="email"
                 name="email"
                 placeholder="Email Address"
                 className="flex justify-center items-center pl-4 pr-2 bg-white font-bold text-black"
               />
-              <button
-                type="submit"
-                className="px-1 py-4 bg-base-didi"
-              >
+              <button type="submit" className="px-1 py-4 bg-base-didi">
                 <span className="px-4 fas fa-paper-plane"></span>
               </button>
             </form>
           </div>
         </div>
         {/* Footer sticks to bottom */}
-        <div className="border-2 border-transparent bg-custom-darker-blue py-10 mb-10">
+        <div className="border-2 border-transparent bg-custom-darker-blue py-10 mb-10 mt-10">
           <p className="font-sans font-medium text-[15px] leading-[23px] text-insure-text-dark text-center">
             &copy; Copyright 2025 by Insure. All rights reserved.
           </p>

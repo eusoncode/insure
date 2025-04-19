@@ -1,0 +1,122 @@
+.hero-section {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.hero-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1050px;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider-wrap {
+  position: relative;
+  z-index: 10;
+  padding: 140px 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 8rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.slider-content {
+  position: relative;
+  padding-right: 0;
+}
+
+.shape-icon {
+  position: absolute;
+  right: -140;
+  top: -2.5rem;
+  animation: swing 1s ease-in-out 1s infinite alternate;
+  transform-origin: top right;
+  z-index: 11;
+}
+
+.slider-title {
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #2b2b5e;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.slider-info {
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 1.5rem;
+}
+
+.primary-btn {
+  background-color: #00cde5;
+  color: white;
+  padding: 15px 55px;
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+.icon-box {
+  box-sizing: border-sizing;
+  display: block;
+  width: 76px;
+  height: 76px;
+  font-family: "kumbh Sans", Sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 76px;
+  text-align: center;
+  border-radius: 9999px;
+  background-color: white;
+  color: white;
+  transition: all 0.3s ease;
+  border: 2px solid gray;
+}
+
+.icon-box_2 {
+  box-sizing: border-sizing;
+  display: block;
+  width: 53px;
+  height: 53px;
+  font-family: "kumbh Sans", Sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 76px;
+  text-align: center;
+  border-radius: 9999px;
+  background-color: white;
+  color: #2b2b5e;
+  transition: all 0.3s ease;
+  border: 2px solid gray;
+}
+
+.icon-box:hover, .icon-box_2:hover {
+  background-color: #2b2b5e;
+  color: white;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
