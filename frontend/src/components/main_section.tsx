@@ -13,10 +13,10 @@ import Track_your_claim_section from "@/components/body_section/track_your_claim
 export default function Main_section() {
   return (
     <section className="">
-      <div className="flex flex-col max-h-screen max-w-screen mb-2 border-2 border-green-600">
+      <div className="flex flex-col max-h-screen mb-2 border-2 border-green-600">
         <Insurance_section />
-        <Save_money_section />
         <About_company_section />
+        <Save_money_section />
         <Offering_section />
         <About_company2_section />
         <Envato_section />
