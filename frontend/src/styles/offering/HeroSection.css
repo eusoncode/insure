@@ -1,0 +1,381 @@
+
+* {
+     box-sizing: border-box;
+}
+
+.pt-120 {
+     padding-top: 120px;
+}
+
+.pb-120 {
+     padding-bottom: 120px;
+}
+
+.service-home-one {
+     background-size: cover;
+}
+
+inline-style {
+    background-image: url("assets/images/backgrounds/insurace-bg-1.jpg");
+}
+
+.container {
+     --bs-gutter-x: 1.5rem;
+     --bs-gutter-y: 0;
+     width: 100%;
+     padding-right: calc(var(--bs-gutter-x) * .5);
+     padding-left: calc(var(--bs-gutter-x) * .5);
+     margin-right: auto;
+     margin-left: auto;
+}
+
+ .container {
+     padding-left: 15px;
+     padding-right: 15px;
+}
+
+.sec-title {
+     margin-bottom: 40px;
+}
+
+.service-home-one .sec-title {
+     text-align: center;
+}
+
+ h6 {
+     margin-top: 0px;
+     margin-bottom: 0.5rem;
+     font-weight: 500;
+     line-height: 1.2;
+     color: var(--bs-heading-color);
+}
+
+.sec-title__tagline {
+     margin: 0px;
+     color: var(--modins-text, #82828a);
+     line-height: 1.2em;
+     font-size: 14px;
+     font-weight: 600;
+     text-transform: uppercase;
+     position: relative;
+     display: inline-block;
+     letter-spacing: 0.1rem;
+}
+
+.sec-title__tagline::after {
+     content: "";
+     position: absolute;
+     top: 50%;
+     left: 110%;
+     width: 17px;
+     height: 3px;
+     display: inline-block;
+     transform: translateY(-50%);
+     border-radius: 1.5px;
+     background-color: var(--modins-base);
+}
+
+ h3 {
+     margin-top: 0px;
+     margin-bottom: 0.5rem;
+     font-weight: 500;
+     line-height: 1.2;
+     color: var(--bs-heading-color);
+}
+
+.sec-title__title {
+     margin: 0px;
+     font-size: 35px;
+     color: var(--modins-primary, #2b2b5e);
+     font-weight: bold;
+     line-height: 1.2em;
+     letter-spacing: -0.04em;
+}
+
+ h3 br {
+     display: none;
+}
+
+.row {
+     --bs-gutter-x: 1.5rem;
+     --bs-gutter-y: 0;
+     display: flex;
+     flex-wrap: wrap;
+     margin-top: calc(-1 * var(--bs-gutter-y));
+     margin-right: calc(-.5 * var(--bs-gutter-x));
+     margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+.gutter-y-30 {
+     --bs-gutter-y: 30px;
+}
+
+.row > * {
+     flex-shrink: 0;
+     width: 100%;
+     max-width: 100%;
+     padding-right: calc(var(--bs-gutter-x) * .5);
+     padding-left: calc(var(--bs-gutter-x) * .5);
+     margin-top: var(--bs-gutter-y);
+}
+
+.col-md-6 {
+     flex: 0 0 auto;
+     width: 50%;
+}
+
+.col-lg-3 {
+     flex: 0 0 auto;
+     width: 25%;
+}
+
+.animated {
+     animation-duration: 1s;
+     animation-fill-mode: both;
+}
+
+.fadeInUp {
+     animation-name: fadeInUp;
+}
+
+.service-home-one .service-card {
+     overflow: hidden;
+}
+
+.service-card {
+     box-shadow: rgba(0, 0, 0, 0.07) 0px 10px 60px 0px;
+     background-color: var(--modins-white, #fff);
+     text-align: center;
+}
+
+.service-card:hover {
+     box-shadow: rgba(0, 0, 0, 0.09) 0px 10px 60px 0px;
+}
+
+.service-card__image {
+     position: relative;
+}
+
+.service-card__image::before {
+     content: "";
+     position: absolute;
+     width: 100%;
+     left: 0px;
+     top: 0px;
+     height: 0%;
+     z-index: 1;
+     background-color: rgba(var(--modins-primary-rgb), 0.5);
+     clip-path: polygon(0px 0px, 100% 0px, 100% 30%, 100% 88%, 50% 100%, 50% 100%, 0px 88%, 0% 30%);
+     transition: 0.3s;
+}
+
+.service-card__image::after {
+     content: "";
+     position: absolute;
+     left: 0px;
+     right: 0px;
+     top: -5px;
+     width: 100%;
+     height: 100%;
+     z-index: -1;
+     background-color: var(--modins-base);
+     clip-path: polygon(0px 0px, 100% 0px, 100% 30%, 100% 88%, 50% 100%, 50% 100%, 0px 88%, 0% 30%);
+     transition: 0.3s;
+     opacity: 0;
+}
+
+img {
+     vertical-align: middle;
+}
+
+.service-card__image img {
+     clip-path: polygon(0px 0px, 100% 0px, 100% 30%, 100% 88%, 50% 100%, 50% 100%, 0px 88%, 0% 30%);
+     width: 100%;
+}
+
+.service-card__icon {
+     width: 80px;
+     height: 80px;
+     position: absolute;
+     bottom: -25px;
+     font-size: 32px;
+     left: 0px;
+     right: 0px;
+     margin: 0px auto;
+     color: var(--modins-white);
+     line-height: 80px;
+     border-radius: 50%;
+     background-color: var(--modins-primary);
+     z-index: 2;
+}
+
+.service-card__icon::before {
+     content: "";
+     position: absolute;
+     left: 0px;
+     width: 100%;
+     height: 100%;
+     border-radius: 50%;
+     background-color: var(--modins-base);
+     z-index: -1;
+     transform: scale(0);
+     transition: 0.3s;
+}
+
+[class^="icon-"] {
+     font-style: normal;
+     font-weight: normal;
+     font-variant: normal;
+     text-transform: none;
+     line-height: 1;
+     -webkit-font-smoothing: antialiased;
+     font-family: icomoon !important;
+}
+
+.icon-car-1::before {
+     content: "";
+}
+
+.service-card__content {
+     padding: 40px 20px 35px;
+}
+
+.service-card__title {
+     font-size: 20px;
+     font-weight: 700;
+}
+
+a {
+     color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));
+     text-decoration: underline;
+}
+
+.service-card__title a {
+     color: var(--modins-primary);
+     background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95% / 0px 1px no-repeat;
+     transition: 500ms;
+}
+
+a:hover {
+     --bs-link-color-rgb: var(--bs-link-hover-color-rgb);
+}
+
+ a:hover {
+     text-decoration: none;
+}
+
+.service-card__title a:hover {
+     background-size: 100% 1px;
+}
+
+p {
+     margin-top: 0px;
+     margin-bottom: 1rem;
+}
+
+.service-card__info {
+     margin-bottom: 0px;
+     font-size: 14px;
+     font-weight: 500;
+     line-height: 24px;
+}
+
+.icon-cardiogram::before {
+     content: "";
+}
+
+.icon-home::before {
+     content: "";
+}
+
+.icon-cross::before {
+     content: "";
+}
+
+.icon-suitcase::before {
+     content: "";
+}
+
+.icon-fire::before {
+     content: "";
+}
+
+.icon-wedding-rings::before {
+     content: "";
+}
+
+.service-featured {
+     position: relative;
+     z-index: 1;
+     padding-bottom: 10px;
+}
+
+.service-featured .service-card__bg {
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     bottom: 0px;
+     width: 100%;
+     height: 100%;
+     z-index: -1;
+     background-size: cover;
+}
+
+.service-featured .service-card__title {
+     font-size: 24px;
+     margin-bottom: 20px;
+     color: var(--modins-white, #fff);
+}
+
+.service-featured .service-card__info {
+     color: rgb(160, 160, 192);
+     margin-bottom: 30px;
+}
+
+.modins-btn {
+     display: inline-block;
+     vertical-align: middle;
+     appearance: none;
+     border: none;
+     font-size: 14px;
+     font-weight: 700;
+     font-family: var(--modins-font, "Plus Jakarta Sans", sans-serif);
+     padding: 10px 40px;
+     transition: 500ms;
+     position: relative;
+     z-index: 1;
+     background-color: var(--modins-base, #00cde5);
+     color: rgb(255, 255, 255);
+     overflow: hidden;
+     outline: none !important;
+}
+
+.modins-btn:hover {
+     color: var(--modins-base, #00cde5);
+     background-color: rgb(255, 255, 255);
+}
+
+.modins-btn:hover em {
+     width: 500px;
+     height: 500px;
+     display: inline-block;
+}
+
+.service-featured .modins-btn:hover {
+     color: var(--modins-primary, #2b2b5e);
+}
+
+.modins-btn em {
+     position: absolute;
+     width: 0px;
+     height: 0px;
+     background-color: var(--modins-primary, #2b2b5e);
+     border-radius: 50%;
+     transform: translate(-50%, -50%);
+     transition: 0.5s;
+     z-index: -1;
+}
+
+.service-featured .modins-btn em {
+     background-color: var(--modins-white, #fff);
+}

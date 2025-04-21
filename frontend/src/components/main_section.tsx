@@ -16,8 +16,8 @@ export default function Main_section() {
       <div className="flex flex-col mb-2 border-2 border-green-600">
         <Insurance_section />
         <About_company_section />
-        <Save_money_section />
         <Offering_section />
+        <Save_money_section />
         <About_company2_section />
         <Envato_section />
         <Free_quote_page_section />
