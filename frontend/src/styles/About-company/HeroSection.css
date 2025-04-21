@@ -2,6 +2,37 @@
      box-sizing: border-box;
 }
 
+
+@keyframes shapeMover {
+  0% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(45deg);
+  }
+  66% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes shape2Mover {
+  0% {
+    transform: rotate(0);
+  }
+  34% {
+    transform: rotate(10deg);
+  }
+  66% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
 .about-one-home {
      position: relative;
      padding: 120px 0px;
@@ -10,7 +41,11 @@
 }
 
 .about-one-home__shape {
-     display: none;
+     display: inline-flex;
+     position: absolute;
+     top: 0px;
+     right: 0px;
+     animation: 9.5s ease 0s infinite normal none running shape2Mover;
 }
 
 img {
@@ -245,12 +280,13 @@ p br {
      width: inherit;
 }
 
+
 .about-one-home__image__arrow {
      position: absolute;
      top: 0px;
      right: 0px;
      z-index: -2;
-     animation: 62s ease 0s infinite normal none running shapeMover;
+     animation: 62s ease-in-out 0s infinite normal none running shapeMover;
 }
 
 .about-one-home__image__counter {
@@ -414,11 +450,12 @@ a {
      display: inline-block;
      vertical-align: middle;
      appearance: none;
+     text-decoration: none;
      border: none;
      font-size: 14px;
      font-weight: 700;
      font-family: var(--modins-font, "Plus Jakarta Sans", sans-serif);
-     padding: 10px 40px;
+     padding: 14px 30px;
      transition: 500ms;
      position: relative;
      z-index: 1;
@@ -430,6 +467,7 @@ a {
 
 .about-one-home .modins-btn {
      background-color: var(--modins-primary, #2b2b5e);
+     color: white;
 }
 
 a:hover {
@@ -441,7 +479,7 @@ a:hover {
 }
 
 .modins-btn:hover {
-     color: var(--modins-base, #00cde5);
+     color: var(--modins-base, #ffffff);
      background-color: rgb(255, 255, 255);
 }
 

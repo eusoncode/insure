@@ -4,9 +4,11 @@ import about_shape_1 from "@/assets/about_shape_1.png";
 import about_shape_1_1 from "@/assets/about_shape_1_1.png";
 import about_shape_1_2 from "@/assets/about_shape_1_2.png";
 import about_shape_1_3 from "@/assets/about_shape_1_3.png";
+import about_shape_1_4 from "@/assets/about_shape_1_4.png";
 import { FileText, HandCoins, ShieldCheck } from "lucide-react";
+import { useEffect, useState } from "react";
 
-const iconSize = 40;
+const iconSize = 50;
 
 const data = [
   {
@@ -29,18 +31,53 @@ const data = [
 ];
 
 export default function About_company_section() {
+  const [awardCount, setAwardCount] = useState(0); // for 38
+  const [experienceCount, setExperienceCount] = useState(0); // for 30
+
+  useEffect(() => {
+    // Award Counter: 0 → 38
+    let awardStart = 0;
+    const awardTarget = 38;
+    const awardDuration = 3500;
+    const awardStep = Math.floor(awardDuration / awardTarget);
+
+    const awardInterval = setInterval(() => {
+      awardStart += 1;
+      setAwardCount(awardStart);
+      if (awardStart >= awardTarget) clearInterval(awardInterval);
+    }, awardStep);
+
+    // Experience Counter: 0 → 30
+    let expStart = 0;
+    const expTarget = 30;
+    const expDuration = 4500;
+    const expStep = Math.floor(expDuration / expTarget);
+
+    const expInterval = setInterval(() => {
+      expStart += 1;
+      setExperienceCount(expStart);
+      if (expStart >= expTarget) clearInterval(expInterval);
+    }, expStep);
+
+    // Cleanup both intervals
+    return () => {
+      clearInterval(awardInterval);
+      clearInterval(expInterval);
+    };
+  }, []);
+
   return (
     <section className="about-one-home">
-      <div className="about-one-home__shape">
-        <Image src={about_shape_1_3} alt="modins"/>
+      <div className="about-one-home__shape absolute right-0 top-0">
+        <Image src={about_shape_1_4} alt="modins" className="img" />
       </div>
 
       {/* <!-- Feature --> */}
       <section className="feature-one">
         <div className="container-fluid ">
-          <div className="flex flex-row">
+          <div className="flex flex-row gap-8">
             {data.map((item) => (
-              <div className="flex">
+              <div className="flex shadow-md">
                 <div className="bg-gradient-to-t from-[#00cde5] to-[#252554] text-white flex items-center justify-center p-8">
                   {item.icon}
                 </div>
@@ -74,16 +111,19 @@ export default function About_company_section() {
                 <div className="img-2 top-72">
                   <Image src={about_shape_1_2} alt="modins" className={""} />
                 </div>
-                {/* <div className="about-one-home__image__arrow">
+                <div className="about-one-home__image__arrow">
                   <Image src={about_shape_1_3} alt="modins" className={""} />
-                </div> */}
+                </div>
                 <div className="about-one-home__image__counter count-box counted">
-                  <h3
+                  {/* <h3
                     className="about-one-home__image__count count-text"
                     data-stop="30"
                     data-speed="1500"
                   >
                     30
+                  </h3> */}
+                  <h3 className="about-one-home__image__count count-text">
+                    {experienceCount}
                   </h3>
                   <span className="about-one-home__image__text">
                     Years <br /> of experience
@@ -115,10 +155,10 @@ export default function About_company_section() {
               </div>
               {/*<!-- /.sec-title --> */}
               <p className="about-one-home__content__text-two">
-                Lorem ipsum dolor sit amet consectur adipiscing <br /> elit sed eiusmod
-                tempor incididunt labore dolore magna aliquaenim ad minim. Sed
-                risus commodo ornare felis non, eleifend molestie metus pharetra
-                eleifend.
+                Lorem ipsum dolor sit amet consectur adipiscing <br /> elit sed
+                eiusmod tempor incididunt labore dolore magna aliquaenim ad
+                minim. Sed risus commodo ornare felis non, eleifend molestie
+                metus pharetra eleifend.
               </p>
               <div className="about-one-home__content__wrapper">
                 <div>
@@ -148,7 +188,7 @@ export default function About_company_section() {
                     </div>
                     <div className="about-one-home__content__icon count-box counted">
                       <ShieldCheck size={iconSize} />
-                      <div className="about-one-home__content__couter__head">
+                      {/* <div className="about-one-home__content__couter__head">
                         <span>+</span>
                         <span
                           className="about-one-home__content__count count-text"
@@ -156,6 +196,12 @@ export default function About_company_section() {
                           data-speed="1500"
                         >
                           38
+                        </span>
+                      </div> */}
+                      <div className="about-one-home__content__couter__head">
+                        <span>+</span>
+                        <span className="about-one-home__content__count count-text">
+                          {awardCount}
                         </span>
                       </div>
                     </div>
