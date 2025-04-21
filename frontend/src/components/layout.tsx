@@ -11,7 +11,7 @@ export default function Layout({ children }: LayoutProps) {
       </header>
 
       {/* Main content grows to fill remaining space */}
-      <main className="flex-grow">{children}</main>
+      <main className="">{children}</main>
 
       {/* Footer sticks to bottom if not enough content */}
       <Footer />

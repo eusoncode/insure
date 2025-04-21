@@ -1,97 +1,55 @@
 import "../../styles/About-company/HeroSection.css";
 import Image from "next/image";
-import about_shape_1 from "@/assets/about-shape-1.png";
-import about_shape_1_1 from "@/assets/about-shape-1_1.png";
-import about_shape_1_2 from "@/assets/about-shape-1_2.png";
-import about_shape_1_3 from "@/assets/about-shape-1_3.png";
+import about_shape_1 from "@/assets/about_shape_1.png";
+import about_shape_1_1 from "@/assets/about_shape_1_1.png";
+import about_shape_1_2 from "@/assets/about_shape_1_2.png";
+import about_shape_1_3 from "@/assets/about_shape_1_3.png";
+import { FileText, HandCoins, ShieldCheck } from "lucide-react";
+
+const iconSize = 40;
+
+const data = [
+  {
+    icon: <HandCoins size={iconSize} />,
+    title: "Safe Money",
+    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus omnis optio neque"
+  },
+  {
+    icon: <FileText size={iconSize} />,
+    title: "Get a free quote",
+    description:
+      "Lorem ipsum dolor amet consectetur adipiscing elit do eiusmod tempor incid idunt ut labore",
+  },
+  {
+    icon: <ShieldCheck size={iconSize} />,
+    title: "Fast & Reliable",
+    description:
+      "Lorem ipsum dolor amet consectetur adipiscing elit do eiusmod tempor incid idunt ut labore",
+  },
+];
 
 export default function About_company_section() {
   return (
-    <section className="about-one-home" style={{}}>
-      
+    <section className="about-one-home">
       <div className="about-one-home__shape">
-        <Image src={about_shape_1_3} alt="modins" className={""} />
+        <Image src={about_shape_1_3} alt="modins"/>
       </div>
 
       {/* <!-- Feature --> */}
-      <section className="feature-one" style={{}}>
+      <section className="feature-one">
         <div className="container-fluid ">
-          <div className="row gutter-y-30" style={{}}>
-            <div
-              className="col-lg-4 col-md-6 wow fadeInUp animated"
-              data-wow-delay="100ms"
-              style={{
-                visibility: "visible",
-                animationDelay: "100ms",
-                animationName: "fadeInUp",
-              }}
-            >
-              <div className="feature-one__item" style={{}}>
-                <div className="feature-one__item__icon" style={{}}>
-                  <span className="icon-save-money"></span>
+          <div className="flex flex-row">
+            {data.map((item) => (
+              <div className="flex">
+                <div className="bg-gradient-to-t from-[#00cde5] to-[#252554] text-white flex items-center justify-center p-8">
+                  {item.icon}
                 </div>
-                <div className="feature-one__item__content" style={{}}>
-                  <h3 className="feature-one__item__title" style={{}}>
-                    Safe your money
-                  </h3>
-                  <p className="feature-one__item__text" style={{}}>
-                    Lorem ipsum dolor amet consectetur adipiscing elit do
-                    eiusmod tempor <br /> incid idunt ut labore.
-                  </p>
+                <div className="flex flex-col space-y-3 bg-white p-5">
+                  <h2 className="text-xl font-bold">{item.title}</h2>
+                  <p className="text-gray-500">{item.description}</p>
                 </div>
               </div>
-              {/* <!-- feature-item --> */}
-            </div>
-            <div
-              className="col-lg-4 col-md-6 wow fadeInUp animated"
-              data-wow-delay="100ms"
-              style={{
-                visibility: "visible",
-                animationDelay: "100ms",
-                animationName: "fadeInUp",
-              }}
-            >
-              <div className="feature-one__item" style={{}}>
-                <div className="feature-one__item__icon" style={{}}>
-                  <span className="icon-online-registration" style={{}}></span>
-                </div>
-                <div className="feature-one__item__content" style={{}}>
-                  <h3 className="feature-one__item__title" style={{}}>
-                    Get a free quote
-                  </h3>
-                  <p className="feature-one__item__text" style={{}}>
-                    Lorem ipsum dolor amet consectetur adipiscing elit do
-                    eiusmod tempor <br /> incid idunt ut labore.
-                  </p>
-                </div>
-              </div>
-              {/* <!-- feature-item --> */}
-            </div>
-            <div
-              className="col-lg-4 col-md-6 wow fadeInUp animated"
-              data-wow-delay="100ms"
-              style={{
-                visibility: "visible",
-                animationDelay: "100ms",
-                animationName: "fadeInUp",
-              }}
-            >
-              <div className="feature-one__item" style={{}}>
-                <div className="feature-one__item__icon">
-                  <span className="icon-guarantee" style={{}}></span>
-                </div>
-                <div className="feature-one__item__content" style={{}}>
-                  <h3 className="feature-one__item__title" style={{}}>
-                    Fast &amp; reliable
-                  </h3>
-                  <p className="feature-one__item__text">
-                    Lorem ipsum dolor amet consectetur adipiscing elit do
-                    eiusmod tempor <br /> incid idunt ut labore.
-                  </p>
-                </div>
-              </div>
-              {/* <!-- feature-item --> */}
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -99,7 +57,7 @@ export default function About_company_section() {
       {/*<!-- /.container --> */}
       <div className="container">
         <div className="row">
-          <div className="col-lg-6" style={{}}>
+          <div className="col-lg-6">
             <div
               className="about-one-home__image wow fadeInLeft animated"
               data-wow-delay="300ms"
@@ -109,32 +67,27 @@ export default function About_company_section() {
                 animationName: "fadeInLeft",
               }}
             >
-              <div className="about-one-home__double-image" style={{}}>
-                <div className="img-1">
+              <div className="about-one-home__double-image">
+                <div className="img-1 left-30">
                   <Image src={about_shape_1_1} alt="modins" className={""} />
                 </div>
-                <div className="img-2">
+                <div className="img-2 top-72">
                   <Image src={about_shape_1_2} alt="modins" className={""} />
                 </div>
-                <div className="about-one-home__image__arrow">
+                {/* <div className="about-one-home__image__arrow">
                   <Image src={about_shape_1_3} alt="modins" className={""} />
-                </div>
-                <div
-                  className="about-one-home__image__counter count-box counted"
-                  style={{}}
-                >
+                </div> */}
+                <div className="about-one-home__image__counter count-box counted">
                   <h3
                     className="about-one-home__image__count count-text"
                     data-stop="30"
                     data-speed="1500"
-                    style={{}}
                   >
                     30
                   </h3>
-                  <p className="about-one-home__image__text" style={{}}>
-                    Years <br />
-                    of experience
-                  </p>
+                  <span className="about-one-home__image__text">
+                    Years <br /> of experience
+                  </span>
                 </div>
               </div>
             </div>
@@ -150,57 +103,51 @@ export default function About_company_section() {
               animationName: "fadeInRight",
             }}
           >
-            <div className="about-one-home__content" style={{}}>
-              <div className="sec-title" style={{}}>
-                <h6 className="sec-title__tagline" style={{}}>
-                  About company
-                </h6>
+            <div className="about-one-home__content max-w-xl">
+              <div className="sec-title">
+                <h6 className="sec-title__tagline">About company</h6>
                 {/*<!-- /.sec-title__tagline --> */}
 
-                <h3 className="sec-title__title" style={{}}>
-                  Providing the best insurance policy to customers
+                <h3 className="sec-title__title">
+                  Providing the best insurance <br /> policy to customers
                 </h3>
                 {/*<!-- /.sec-title__title --> */}
               </div>
               {/*<!-- /.sec-title --> */}
-              <p className="about-one-home__content__text-two" style={{}}>
-                Lorem ipsum dolor sit amet consectur adipiscing elit sed eiusmod
+              <p className="about-one-home__content__text-two">
+                Lorem ipsum dolor sit amet consectur adipiscing <br /> elit sed eiusmod
                 tempor incididunt labore dolore magna aliquaenim ad minim. Sed
                 risus commodo ornare felis non, eleifend molestie metus pharetra
                 eleifend.
               </p>
-              <div className="about-one-home__content__wrapper" style={{}}>
-                <div style={{}}>
+              <div className="about-one-home__content__wrapper">
+                <div>
                   <ul className="about-one-home__content__list">
-                    <li style={{}}>
+                    <li>
                       <span className="fas fa-check-circle"></span>Large number
                       of insurance policies
                     </li>
-                    <li style={{}}>
+                    <li>
                       <span className="fas fa-check-circle"></span>Experience
                       &amp; qualified agents
                     </li>
-                    <li style={{}}>
+                    <li>
                       <span className="fas fa-check-circle"></span>Free
                       insurance quotes
                     </li>
                   </ul>
-                  <a
-                    href="about.html"
-                    className="modins-btn modins-btn--base"
-                    style={{}}
-                  >
-                    <span style={{}}>Discover more</span>
+                  <a href="about.html" className="modins-btn modins-btn--base">
+                    <span>Discover more</span>
                     <em style={{ top: "42.2031px", left: "104.5px" }}></em>
                   </a>
                 </div>
-                <div className="about-one-home__content__counter-wrapper">
-                  <div className="about-one-home__content__counter" style={{}}>
+                <div className="w-3xs absolute bottom-0.5 left-78">
+                  <div className="about-one-home__content__counter">
                     <div className="shape-1">
-                      <Image src={about_shape_1} alt="modins" className={""} />
+                      <Image src={about_shape_1} alt="modins" />
                     </div>
                     <div className="about-one-home__content__icon count-box counted">
-                      <i className="icon-guarantee"></i>
+                      <ShieldCheck size={iconSize} />
                       <div className="about-one-home__content__couter__head">
                         <span>+</span>
                         <span

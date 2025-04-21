@@ -70,18 +70,15 @@ export default function Footer() {
           </div>
 
           {/* Instagram */}
-          <div className="flex flex-col justify-start items-start space-y-6 max-w-70">
+          <div className="flex flex-col justify-start items-start space-y-6 max-w-75">
             <h2 className="flex flex-row space-x-4 justify-center items-center font-bold text-[20px] leading-[24px]">
               <p>Instagram</p>
               <div className="border-2 border-base-didi w-6 rounded-2xl"></div>
             </h2>
             <ul className="flex flex-wrap flex-row w-full space-x-2 mt-4 space-y-2">
-              <li className="h-20 w-20 rounded-sm bg-gray-400 border-2 border-transparent"></li>
-              <li className="h-20 w-20 rounded-sm bg-gray-400 border-2 border-transparent"></li>
-              <li className="h-20 w-20 rounded-sm bg-gray-400 border-2 border-transparent"></li>
-              <li className="h-20 w-20 rounded-sm bg-gray-400 border-2 border-transparent"></li>
-              <li className="h-20 w-20 rounded-sm bg-gray-400 border-2 border-transparent"></li>
-              <li className="h-20 w-20 rounded-sm bg-gray-400 border-2 border-transparent"></li>
+              {[1, 2, 3, 4, 5, 6].map((item) => (
+                <li className="h-20 w-20 rounded-sm bg-gray-400 border-2 border-transparent"></li>
+              ))}
             </ul>
           </div>
 

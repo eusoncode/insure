@@ -228,17 +228,16 @@ p br {
 }
 
 .about-one-home__double-image .img-1 {
-     margin-bottom: 30px;
      position: relative;
      z-index: -1;
 }
 
 .about-one-home__double-image .img-1 img {
-     width: 100%;
+     width: 80%;
 }
 
 .about-one-home__double-image .img-2 {
-     position: relative;
+     position: absolute;
      z-index: -1;
 }
 
@@ -256,8 +255,8 @@ p br {
 
 .about-one-home__image__counter {
      position: absolute;
-     bottom: 0px;
-     right: 80px;
+     bottom: -2px;
+     right: 100px;
      display: inline-flex;
      flex-wrap: wrap;
      align-items: center;
@@ -299,7 +298,6 @@ p br {
 
 .about-one-home__content {
      position: relative;
-     padding-top: 60px;
 }
 
 .sec-title {
@@ -341,7 +339,7 @@ p br {
 
 .sec-title__title {
      margin: 0px;
-     font-size: 35px;
+     font-size: 45px;
      color: var(--modins-primary, #2b2b5e);
      font-weight: bold;
      line-height: 1.2em;
@@ -469,7 +467,8 @@ a:hover {
 }
 
 .about-one-home__content__counter {
-     padding: 10px 30px;
+     padding: 10px 45px;
+     height: 142px;
      border-style: solid;
      border-width: 1px;
      border-radius: 0px 50px;
@@ -506,6 +505,7 @@ a:hover {
 }
 
 .about-one-home__content__text {
+     margin-top: 8px;
      font-size: 18px;
      font-weight: 500;
 }

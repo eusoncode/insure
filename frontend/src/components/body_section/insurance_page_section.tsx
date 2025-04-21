@@ -1,14 +1,14 @@
-import Image from "next/image"
-import background_image from '@/assets/main-slder-shape-1e.png';
+import Image from "next/image";
+import background_image from "@/assets/main-slder-shape-1e.png";
 import family_image from "@/assets/main-slder-shape-2e.png";
 import arrow_shape from "@/assets/arrow-shape.png";
-import '../../styles/HeroSection.css';
-import '../../styles/car.css';
+import "../../styles/HeroSection.css";
+import "../../styles/car.css";
 import "../../styles/house.css";
 import "../../styles/family.css";
 import "../../styles/right-arrow.css";
 import "../../styles/left-arrow.css";
-
+import { CarFront } from "lucide-react";
 
 // export default function Insurance_section() {
 //   return (
@@ -63,12 +63,11 @@ import "../../styles/left-arrow.css";
 //   );
 // }
 
-
 export default function HeroSection() {
   return (
     <section className="hero-section">
       <div
-        className="hero-background"
+        className="hero-background "
         style={{ backgroundImage: `url(${background_image.src})` }}
       >
         <div className="slider-wrap">
@@ -107,7 +106,8 @@ export default function HeroSection() {
               <i className="icon-family_restroom"></i>
             </span>
             <span className="icon-box">
-              <i className="icon-local_car_wash"></i>
+              {/* <i className="icon-local_car_wash"></i> */}
+              <CarFront />
             </span>
             <span className="icon-box">
               <i className="icon-home-outline"></i>
