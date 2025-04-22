@@ -1,5 +1,6 @@
+import "../../styles/offering/HeroSection.css";
 import Image from "next/image";
-import insurance_bg_1 from "@/assets/offering/insurace-bg-1.jpg"
+import insurance_bg_1 from "@/assets/offering/insurace-bg-1.jpg";
 import service_1 from "@/assets/offering/service-1.png";
 import service_2 from "@/assets/offering/service-2.png";
 import service_3 from "@/assets/offering/service-3.png";
@@ -9,22 +10,29 @@ import service_6 from "@/assets/offering/service-6.png";
 import service_7 from "@/assets/offering/service-7.png";
 // import service_featured from "@/assets/offering/service-featured.png";
 import service_featured from "@/assets/offering/service-8.png";
+import { CarFront } from "lucide-react";
 // import service_8 from "@/assets/offering/service-8.png";
-  
+
 export default function Offering_section() {
+
+  const iconSize = 35;
+
   return (
     <section
-      className="service-one service-home-one pt-120 pb-120"
-      style={{ backgroundImage: `url(${insurance_bg_1})` }}
+      className="service-one service-home-one pt-120 pb-120  border border-red-500"
+      style={{ backgroundImage: `url(${insurance_bg_1.src})` }}
     >
-      <div className="container">
+      <div className="container border border-blue-500">
         <div className="sec-title">
-          <h6 className="sec-title__tagline">what we’re offering</h6>
+          <div className="flex flex-row gap-4 justify-center items-center">
+            <h6 className="sec-title__tagline">what we’re offering</h6>
+            <div className="border-2 border-base-didi w-5 rounded-2xl"></div>
+          </div>
           <h3 className="sec-title__title">
             We’re giving all the insurance <br /> services to you
           </h3>
         </div>
-        <div className="row gutter-y-30">
+        <div className="row gutter-y-30 border border-green-500">
           <div className="col-md-6 col-lg-3">
             <div
               className="service-card wow fadeInUp animated"
@@ -37,7 +45,7 @@ export default function Offering_section() {
                 animationName: "fadeInUp",
               }}
             >
-              <div className="service-card__image">
+              <div className="service-card__image border border-green-500">
                 <Image
                   src={service_1}
                   alt="Car insurance"
@@ -45,7 +53,8 @@ export default function Offering_section() {
                   height={200}
                 />
                 <div className="service-card__icon">
-                  <i className="icon-car-1"></i>
+                  {/* <i className="icon-car-1"></i> */}
+                  <CarFront size={iconSize} className="relative left-5 top-5" />
                 </div>
               </div>
               <div className="service-card__content">
@@ -271,8 +280,7 @@ export default function Offering_section() {
               <div
                 className="service-card__bg"
                 style={{
-                  backgroundImage:
-                    `url(${service_featured})`
+                  backgroundImage: `url(${service_featured.src})`,
                 }}
               ></div>
               <div className="service-card__content">

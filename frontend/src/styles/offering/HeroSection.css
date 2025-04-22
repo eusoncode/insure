@@ -16,13 +16,13 @@
 }
 
 inline-style {
-    background-image: url("assets/images/backgrounds/insurace-bg-1.jpg");
+    background-image: url("@/assets/offering/insurace-bg-1.jpg");
 }
 
 .container {
      --bs-gutter-x: 1.5rem;
      --bs-gutter-y: 0;
-     width: 100%;
+     width: 62%;
      padding-right: calc(var(--bs-gutter-x) * .5);
      padding-left: calc(var(--bs-gutter-x) * .5);
      margin-right: auto;
@@ -72,7 +72,7 @@ inline-style {
      display: inline-block;
      transform: translateY(-50%);
      border-radius: 1.5px;
-     background-color: var(--modins-base);
+     background-color: var(--modins-base, #00cde5);
 }
 
  h3 {
@@ -112,8 +112,8 @@ inline-style {
 
 .row > * {
      flex-shrink: 0;
-     width: 100%;
-     max-width: 100%;
+     /* width: 100%;
+     max-width: 100%; */
      padding-right: calc(var(--bs-gutter-x) * .5);
      padding-left: calc(var(--bs-gutter-x) * .5);
      margin-top: var(--bs-gutter-y);
@@ -144,7 +144,7 @@ inline-style {
 
 .service-card {
      box-shadow: rgba(0, 0, 0, 0.07) 0px 10px 60px 0px;
-     background-color: var(--modins-white, #fff);
+     background-color: var(--modins-white, #ffffff);
      text-align: center;
 }
 
@@ -178,7 +178,7 @@ inline-style {
      width: 100%;
      height: 100%;
      z-index: -1;
-     background-color: var(--modins-base);
+     background-color: var(--modins-base, #00cde5);
      clip-path: polygon(0px 0px, 100% 0px, 100% 30%, 100% 88%, 50% 100%, 50% 100%, 0px 88%, 0% 30%);
      transition: 0.3s;
      opacity: 0;
@@ -202,10 +202,10 @@ img {
      left: 0px;
      right: 0px;
      margin: 0px auto;
-     color: var(--modins-white);
+     color: var(--modins-white, #ffffff);
      line-height: 80px;
      border-radius: 50%;
-     background-color: var(--modins-primary);
+     background-color: var(--modins-primary, #2b2b5e);
      z-index: 2;
 }
 
@@ -216,9 +216,16 @@ img {
      width: 100%;
      height: 100%;
      border-radius: 50%;
-     background-color: var(--modins-base);
+     background-color: var(--modins-base, #00cde5);
      z-index: -1;
      transform: scale(0);
+     transition: 0.3s;
+}
+
+.service-card__icon:hover {
+     background-color: var(--modins-base, #00cde5);
+     z-index: 1;
+     transform: scale(1);
      transition: 0.3s;
 }
 
@@ -247,7 +254,7 @@ img {
 
 a {
      color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));
-     text-decoration: underline;
+     text-decoration: none;
 }
 
 .service-card__title a {
