@@ -33,9 +33,9 @@ export default function Offering_section() {
           </h3>
         </div>
         <div className="row gutter-y-30 border border-green-500">
-          <div className="col-md-6 col-lg-3">
+          <div className="col-md-6 col-lg-3 border-2 border-purple-500">
             <div
-              className="service-card wow fadeInUp animated"
+              className="service-card wow fadeInUp animated border-2 border-orange-500"
               data-wow-duration="1500ms"
               data-wow-delay="0ms"
               style={{
@@ -45,16 +45,11 @@ export default function Offering_section() {
                 animationName: "fadeInUp",
               }}
             >
-              <div className="service-card__image border border-green-500">
-                <Image
-                  src={service_1}
-                  alt="Car insurance"
-                  width={300}
-                  height={200}
-                />
+              <div className="service-card__image border border-red-500">
+                <Image src={service_1} alt="Car insurance" />
                 <div className="service-card__icon">
                   {/* <i className="icon-car-1"></i> */}
-                  <CarFront size={iconSize} className="relative left-5 top-5" />
+                  <CarFront size={iconSize} className="m-auto" />
                 </div>
               </div>
               <div className="service-card__content">
@@ -67,6 +62,7 @@ export default function Offering_section() {
               </div>
             </div>
           </div>
+
           <div className="col-md-6 col-lg-3">
             <div
               className="service-card wow fadeInUp animated"
