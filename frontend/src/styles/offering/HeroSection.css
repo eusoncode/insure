@@ -162,11 +162,12 @@ inline-style {
      width: 100%;
      left: 0px;
      top: 0px;
-     height: 0%;
+     height: 100%;
      z-index: 1;
-     background-color: rgba(var(--modins-primary-rgb), 0.5);
-     clip-path: polygon(0px 0px, 100% 0px, 100% 30%, 100% 88%, 50% 100%, 50% 100%, 0px 88%, 0% 30%);
+     background-color: rgba(var(--color-red-600), 0.5);
+     clip-path: polygon(0px 0px, 100% 0px, 100% 81%, 50% 93%, 0px 81%, 0% 0%);
      transition: 0.3s;
+     opacity: 1;
 }
 
 .service-card__image::after {
@@ -179,9 +180,14 @@ inline-style {
      height: 100%;
      z-index: -1;
      background-color: var(--modins-base, #00cde5);
-     clip-path: polygon(0px 0px, 100% 0px, 100% 30%, 100% 88%, 50% 100%, 50% 100%, 0px 88%, 0% 30%);
+     clip-path: polygon(0px 0px, 100% 0px, 100% 88%, 50% 100%, 0px 88%, 0% 0%);
      transition: 0.3s;
-     opacity: 0;
+     opacity: 80;
+}
+
+.service-card__image:hover::after {
+  opacity: 1;
+  background-color: transparent;
 }
 
 img {
@@ -189,7 +195,7 @@ img {
 }
 
 .service-card__image img {
-     clip-path: polygon(0px 0px, 100% 0px, 100% 30%, 100% 88%, 50% 100%, 50% 100%, 0px 88%, 0% 30%);
+     clip-path: polygon(0px 0px, 100% 0px, 100% 81%, 50% 93%, 0px 81%, 0% 0%);
      width: 100%;
 }
 

@@ -45,7 +45,7 @@ export default function Offering_section() {
                 animationName: "fadeInUp",
               }}
             >
-              <div className="service-card__image border border-red-500">
+              <div className="service-card__image border-2 border-b-blue-700">
                 <Image src={service_1} alt="Car insurance" />
                 <div className="service-card__icon">
                   {/* <i className="icon-car-1"></i> */}
