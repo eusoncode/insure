@@ -33,7 +33,7 @@ export default function Offering_section() {
           </h3>
         </div>
         <div className="row gutter-y-30 border border-green-500">
-          <div className="col-md-6 col-lg-3 border-2 border-purple-500">
+          <div className="col-md-6 col-lg-3 group border-2 border-purple-500">
             <div
               className="service-card wow fadeInUp animated border-2 border-orange-500"
               data-wow-duration="1500ms"
