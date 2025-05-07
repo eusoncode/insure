@@ -105,23 +105,16 @@ export default function About_company_section() {
               }}
             >
               <div className="about-one-home__double-image">
-                <div className="img-1 left-30">
+                <div className="img-1 left-[-20]">
                   <Image src={about_shape_1_1} alt="modins" className={""} />
                 </div>
-                <div className="img-2 top-72">
+                <div className="img-2 left-[-60] top-72">
                   <Image src={about_shape_1_2} alt="modins" className={""} />
                 </div>
                 <div className="about-one-home__image__arrow">
                   <Image src={about_shape_1_3} alt="modins" className={""} />
                 </div>
                 <div className="about-one-home__image__counter count-box counted">
-                  {/* <h3
-                    className="about-one-home__image__count count-text"
-                    data-stop="30"
-                    data-speed="1500"
-                  >
-                    30
-                  </h3> */}
                   <h3 className="about-one-home__image__count count-text">
                     {experienceCount}
                   </h3>

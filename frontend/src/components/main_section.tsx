@@ -17,8 +17,8 @@ export default function Main_section() {
         <Insurance_section />
         <About_company_section />
         <Offering_section />
-        <Save_money_section />
         <About_company2_section />
+        <Save_money_section />
         <Envato_section />
         <Free_quote_page_section />
         <Numbers_section />

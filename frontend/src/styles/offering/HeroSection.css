@@ -233,7 +233,7 @@ img {
   background-color: var(--modins-base, #00cde5);
   z-index: -1;
   transform: scale(0);
-  transition: transform 0.3s ease;
+  transition: all 0.6s ease;
 }
 
 .group:hover .service-card__icon::before {
@@ -328,8 +328,7 @@ p {
 
 .service-featured {
   position: relative;
-  z-index: 1;
-  padding-bottom: 10px;
+  padding-bottom: 18px;
 }
 
 .service-featured .service-card__bg {
@@ -341,6 +340,20 @@ p {
   height: 100%;
   z-index: -1;
   background-size: cover;
+}
+
+.service-featured .service-card__bg::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;  
+  background-color: var(--modins-base, #3d3d6e);
+  z-index: 1;
+  background-size: cover;
+  opacity: 90%;
 }
 
 .service-featured .service-card__title {
