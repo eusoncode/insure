@@ -71,7 +71,7 @@ export default function Offering_section() {
 
   return (
     <section
-      className="service-one service-home-one pt-120 pb-120  border border-red-500"
+      className="service-one service-home-one pt-120 pb-120"
       style={{ backgroundImage: `url(${insurance_bg_1.src})` }}
     >
       <div className="container">
