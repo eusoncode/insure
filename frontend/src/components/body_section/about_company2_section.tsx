@@ -89,12 +89,12 @@ export default function About_company2_section() {
             </div>
           </div>
 
-          <div className="relative flex flex-col w-170 border border-b-blue-800">
+          <div className="relative flex flex-col w-168 border border-b-blue-800">
             <div className="border border-red-600 absolute left-150 z-15 shape-one">
               <Image src={""} alt="double-quote-image" />
             </div>
-            <div className="w-full px-12 py-12 bg-[#2B2B5E]">
-              <div>
+            <div className="w-full h-50 px-12 py-12 bg-[#2B2B5E] before-custom-clip">
+              <div className="">
                 <i className="fa fa-star"></i>
                 <i className="fa fa-star"></i>
                 <i className="fa fa-star"></i>
@@ -109,31 +109,22 @@ export default function About_company2_section() {
               </div>
             </div>
             <div
-              className="absolute z-[-5] top-45 left-15 w-40 h-15 border border-b-blue-800 bg-[#2B2B5E]"
+              className="absolute z-[5] top-50 left-15 w-39 h-15 before-custom-clip-path bg-[#00CDE5]"
               style={{
-                clipPath: "polygon(0px 0px, 100% 0px, 0% 81%)",
+                clipPath: "polygon(0px 0px, 100% 0px, 0% 92%)",
               }}
             ></div>
-            <div className="flex flex-row ml-35 items-center mt-2 gap-2">
-              {/* <div className="w-20 h-20 rounded-full overflow-hidden flex justify-center items-center border border-blue-700">
-                <Image
-                  src={""}
-                  width={40}
-                  height={40}
-                  alt="profile_image"
-                  className="mt-auto inset-0 object-cover"
-                />
-              </div> */}
+            <div className="flex flex-row ml-43 items-center mt-4 gap-2">
               <div
                 className="flex justify-center items-center top-18 left-135 rounded-full border-transparent bg-cover"
                 style={{
-                  width: "80px",
-                  height: "80px",
+                  width: "100px",
+                  height: "100px",
                   backgroundImage:
                     "url('/about_company2/testimonai_one_1.png')",
                 }}
               ></div>
-              <div className="flex flex-col gap-1 leading-3.5">
+              <div className="flex flex-col gap-2 leading-3.5">
                 <p className="font-bold">Kevin martin</p>
                 <p className="text-sm">Co Founder</p>
               </div>
