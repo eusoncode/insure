@@ -1,5 +1,4 @@
-import Image from "next/image";
-
+import { LuQuote } from "react-icons/lu";
 
 export default function About_company2_section() {
   return (
@@ -9,47 +8,52 @@ export default function About_company2_section() {
           <div className="w-[39%] h-165 opacity-r bg-[url('/about_company2/testimonai_one_bg.png')] bg-cover border border-transparent"></div>
           <div className="relative w-full h-[660px] flex flex-row border border-green-600">
             <div
-              className="absolute flex justify-center items-center top-18 left-135 rounded-full border-transparent bg-cover"
+              className="absolute opacity-40 flex justify-center items-center top-22 left-55 rounded-full border-transparent bg-cover"
               style={{
-                width: "40px",
-                height: "40px",
-                backgroundImage: "url('/about_company2/testimonai_one_1.png')",
+                width: "140px",
+                height: "140px",
+                backgroundImage:
+                  "url('/about_company2/avatar/avata-autor-shape-1.png')",
               }}
             ></div>
 
             <div
-              className="absolute flex justify-center items-center top-18 left-250 rounded-full border-transparent bg-cover"
+              className="absolute opacity-40 flex justify-center items-center top-25 left-200 rounded-full border-transparent bg-cover"
               style={{
-                width: "108px",
-                height: "108px",
-                backgroundImage: "url('/about_company2/testimonai_one_1.png')",
+                width: "95px",
+                height: "95px",
+                backgroundImage:
+                  "url('/about_company2/avatar/avata-autor-shape-3.png')",
               }}
             ></div>
 
             <div
-              className="absolute flex justify-center items-center top-120 left-270 rounded-full border-transparent bg-cover"
+              className="absolute opacity-40 flex justify-center items-center top-78 left-280 rounded-full border-transparent bg-cover"
               style={{
-                width: "97px",
-                height: "97px",
-                backgroundImage: "url('/about_company2/testimonai_one_1.png')",
+                width: "85px",
+                height: "85px",
+                backgroundImage:
+                  "url('/about_company2/avatar/avata-autor-shape-4.png')",
               }}
             ></div>
 
             <div
-              className="absolute flex justify-center items-center top-129 left-70 rounded-full border-transparent bg-cover"
+              className="absolute opacity-40 flex justify-center items-center top-116 left-239 rounded-full border-transparent bg-cover"
               style={{
-                width: "70px",
-                height: "70px",
-                backgroundImage: "url('/about_company2/testimonai_one_1.png')",
+                width: "120px",
+                height: "120px",
+                backgroundImage:
+                  "url('/about_company2/avatar/avata-autor-shape-2.png')",
               }}
             ></div>
 
             <div
-              className="absolute flex justify-center items-center top-19 left-40 rounded-full border-transparent bg-cover"
+              className="absolute opacity-40 flex justify-center items-center top-127 left-55 rounded-full border-transparent bg-cover"
               style={{
-                width: "130px",
-                height: "130px",
-                backgroundImage: "url('/about_company2/testimonai_one_1.png')",
+                width: "80px",
+                height: "80px",
+                backgroundImage:
+                  "url('/about_company2/avatar/avata-autor-shape-5.png')",
               }}
             ></div>
           </div>
@@ -79,29 +83,32 @@ export default function About_company2_section() {
                 role="button"
               ></button>
               <button
-                className="w-8 h-1 mt-3 rounded bg-[#00CDE5]"
+                className="w-8 h-1 mt-3 rounded bg-[#F0F0F0]"
                 role="button"
               ></button>
               <button
-                className="w-8 h-1 mt-3 rounded bg-[#00CDE5]"
+                className="w-8 h-1 mt-3 rounded bg-[#F0F0F0]"
                 role="button"
               ></button>
             </div>
           </div>
 
-          <div className="relative flex flex-col w-168 border border-b-blue-800">
-            <div className="border border-red-600 absolute left-150 z-15 shape-one">
-              <Image src={""} alt="double-quote-image" />
+          <div className="relative flex flex-col w-165 border border-b-blue-800">
+            <div className="flex items-center justify-center bg-gradient-to-br from-[#1B648D] to-[#00cde5] rounded-bl-[60px] absolute w-26 h-24 top-[-1] left-[555px] z-15 bg-[#00CDE5]">
+              <span className="text-white text-4xl">
+                <LuQuote />
+              </span>
             </div>
-            <div className="w-full h-50 px-12 py-12 bg-[#2B2B5E] before-custom-clip">
-              <div className="">
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
-                <i className="fa fa-star"></i>
+
+            <div className="w-full h-58 px-12 py-6 bg-[#2B2B5E] before-custom-clip">
+              <div className="mt-6 py-2">
+                <i className="fa fa-star text-[#00cde5]"></i>
+                <i className="fa fa-star text-[#00cde5]"></i>
+                <i className="fa fa-star text-[#00cde5]"></i>
+                <i className="fa fa-star text-[#00cde5]"></i>
+                <i className="fa fa-star text-[#00cde5]"></i>
               </div>
-              <div className=" decoration-white">
+              <div className=" text-white font-medium leading-8">
                 Leverage agile frameworks to provide a robust synopsis for high
                 level <br /> overviews. Iterative approaches to corporate
                 strategy data foster to <br />
@@ -109,14 +116,14 @@ export default function About_company2_section() {
               </div>
             </div>
             <div
-              className="absolute z-[5] top-50 left-15 w-39 h-15 before-custom-clip-path bg-[#00CDE5]"
+              className="absolute z-5 top-58 left-15 w-39 h-15 before-custom-clip-path bg-[#00CDE5]"
               style={{
                 clipPath: "polygon(0px 0px, 100% 0px, 0% 92%)",
               }}
             ></div>
-            <div className="flex flex-row ml-43 items-center mt-4 gap-2">
+            <div className="flex flex-row ml-40 items-center mt-3 gap-2">
               <div
-                className="flex justify-center items-center top-18 left-135 rounded-full border-transparent bg-cover"
+                className="flex justify-center items-center left-135 rounded-full border-transparent bg-cover"
                 style={{
                   width: "100px",
                   height: "100px",

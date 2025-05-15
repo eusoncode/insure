@@ -64,7 +64,7 @@ body {
 .before-custom-clip::before {
   content: '';
   position: absolute;
-  height: 205px;
+  height: 237px;
   width: 100%;
   top: 0;
   left: 0;
@@ -74,12 +74,13 @@ body {
 .before-custom-clip-path::before {
   content: '';
   position: absolute;
-  top: -10;
-  left: 1;
+  overflow: visible;
+  top: -6;
+  left: -10;
   width: 160px;
   height: 84px;
   background-color: #2B2B5E;
   clip-path: polygon(0px 0px, 100% 0px, 0% 68%);
-  z-index: -5;
+  z-index: 1;
   transform: translate(3%, 0%);
 }
