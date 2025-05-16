@@ -1,3 +1,49 @@
+@keyframes avatarBender{
+     0% {transform: rotate(0deg) translateX(0);}
+     23% {transform: rotate(10deg) translateX(20px);}
+     56% {transform: rotate(0deg) translateX(0);}
+     73% {transform: rotate(-10deg) translateX(-20px);}
+     100% {transform: rotate(0deg) translateX(0px);}
+}
+.avatar-bend-1 {
+     animation: avatarBender 9s ease-in-out infinite running;
+}
+
+.avatar-bend-2 {
+     animation: avatarBender 7s ease-in-out infinite running;
+}
+
+.avatar-bend-3 {
+     animation: avatarBender 6s ease-in-out infinite running;
+}
+
+.avatar-bend-4 {
+     animation: avatarBender 5s ease-in-out infinite running;
+}
+
+.avatar-bend-5 {
+     animation: avatarBender 4s ease-in-out infinite running;
+}
+
+/* @keyframes slideFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideFadeUp {
+  animation: slideFadeUp 5s ease-out forwards;
+} */
+
+
+
+/* 
+
 
 * {
      box-sizing: border-box;
@@ -483,3 +529,6 @@ inline-style {
 .fa-angle-right::before {
      content: "";
 }
+
+
+*/

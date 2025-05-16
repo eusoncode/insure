@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
+    "aos": "^2.3.4",
     "lucide-react": "^0.501.0",
     "next": "15.2.3",
     "react": "^19.0.0",
@@ -20,6 +21,7 @@
     "@eslint/eslintrc": "^3",
     "@tailwindcss/cli": "^4.0.16",
     "@tailwindcss/postcss": "^4.0.16",
+    "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
