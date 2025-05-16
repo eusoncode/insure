@@ -18,8 +18,8 @@ export default function Main_section() {
         <About_company_section />
         <Offering_section />
         <About_company2_section />
-        <Save_money_section />
         <Envato_section />
+        <Save_money_section />
         <Free_quote_page_section />
         <Numbers_section />
         <Recent_portfolio_section />
