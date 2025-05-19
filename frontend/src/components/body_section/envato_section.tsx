@@ -23,7 +23,7 @@ export default function Envato_section() {
   };
 
   return (
-    <section className="relative flex flex-col items-center justify-center py-16 border-t border-[#E0DDEA] overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center py-18 border-t border-[#E0DDEA] overflow-hidden">
       {/* Background shapes */}
       <div className="absolute top-0 left-0 w-105 h-30">
         <Image
