@@ -1,8 +1,34 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Free_quote_page_section() {
+  const tabs = [
+    { label: "Home", tab: "#home2", active: true },
+    { label: "Vehicles", tab: "#vehicles" },
+    { label: "Life", tab: "#life" },
+    { label: "Business", tab: "#business" },
+  ];
+
   const [balance, setBalance] = useState(35000);
+  const sliderRef = useRef<HTMLInputElement | null>(null);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 10000, // how long animation lasts (in ms)
+      once: false, // false = animate every time you scroll into view
+      mirror: true, // true = animate on scroll up as well
+    });
+  }, []);
+
+  useEffect(() => {
+    const percentage = (balance / 90000) * 100;
+    if (sliderRef.current) {
+      sliderRef.current.style.background = `
+        linear-gradient(to right, #2B2B5E 0%, #00CDE5 ${percentage}%, #ffffff ${percentage}%)`;
+    }
+  }, [balance]);
   return (
     <section
       className="relative flex justify-end h-[797px]"
@@ -11,7 +37,10 @@ export default function Free_quote_page_section() {
       }}
     >
       {/* Left-right form */}
-      <div className="absolute top-0 left-92 w-126 h-full bg-transparent flex flex-col">
+      <div
+        data-aos="fade-left"      
+        className="absolute top-0 left-92 w-126 h-full bg-transparent flex flex-col"
+      >
         {/* Heading */}
         <div className="flex flex-col mt-32 gap-2 leading-[1.2] mb-2">
           <p className="relative m-0 text-[#82828a] leading-[1.2] text-[14px] font-semibold uppercase inline-block tracking-[0.1rem]">
@@ -24,30 +53,28 @@ export default function Free_quote_page_section() {
         </div>
         <div className="ml-0 mt-8">
           {/* Caption */}
-          <div className="">
-            <ul className="flex flex-wrap items-center gap-x-[10px] mb-5 list-none">
-              <li data-tab="#home2" className="relative mb-[10px]">
-                <span className="inline-block text-[14px] font-bold text-white bg-[#2b2b5e] border border-transparent px-[25px] py-[12px] text-center cursor-pointer transition-all duration-300 relative z-[1] after:absolute after:inset-0 after:bg-[#2b2b5e] after:h-full after:z-[-1] content-[''] hover:text-white hover:after:h-full hover:border-transparent">
-                  Home
+          <ul className="flex flex-wrap items-center gap-x-[10px] mb-5 list-none">
+            {tabs.map(({ label, tab, active }) => (
+              <li key={tab} className="relative mb-[10px]">
+                <span
+                  className={`
+                    relative z-[1] inline-block text-[14px] font-bold px-[25px] py-[12px] text-center cursor-pointer 
+                    transition-all duration-700 ease-in-out 
+                    after:content-[''] after:absolute after:inset-0 after:z-[-1] after:bg-[#2b2b5e] 
+                    after:transition-all after:duration-700 after:ease-in-out
+
+                    ${
+                      active
+                        ? "text-white border border-transparent"
+                        : "text-[#2b2b5e] border border-[#e0ddea] bg-transparent after:h-0 hover:after:h-full hover:text-white hover:border-transparent"
+                    }
+                  `}
+                >
+                  {label}
                 </span>
               </li>
-              <li data-tab="#vehicles" className="relative mb-[10px]">
-                <span className="inline-block text-[14px] font-bold text-[#2b2b5e] border border-[#e0ddea] bg-transparent px-[25px] py-[12px] text-center cursor-pointer transition-all duration-300 relative z-[1] after:absolute after:inset-0 after:bg-[#2b2b5e] after:h-0 after:z-[-1] content-[''] hover:text-white hover:after:h-full hover:border-transparent">
-                  Vehicles
-                </span>
-              </li>
-              <li data-tab="#life" className="relative mb-[10px]">
-                <span className="inline-block text-[14px] font-bold text-[#2b2b5e] border border-[#e0ddea] bg-transparent px-[25px] py-[12px] text-center cursor-pointer transition-all duration-300 relative z-[1] after:absolute after:inset-0 after:bg-[#2b2b5e] after:h-0 after:z-[-1] content-[''] hover:text-white hover:after:h-full hover:border-transparent">
-                  Life
-                </span>
-              </li>
-              <li data-tab="#business" className="relative mb-[10px]">
-                <span className="inline-block text-[14px] font-bold text-[#2b2b5e] border border-[#e0ddea] bg-transparent px-[25px] py-[12px] text-center cursor-pointer transition-all duration-300 relative z-[1] after:absolute after:inset-0 after:bg-[#2b2b5e] after:h-0 after:z-[-1] content-[''] hover:text-white hover:after:h-full hover:border-transparent">
-                  Business
-                </span>
-              </li>
-            </ul>
-          </div>
+            ))}
+          </ul>
           {/* Form */}
           <form className="flex flex-col gap-5 w-full max-w-xl">
             {/* Full name */}
@@ -66,7 +93,7 @@ export default function Free_quote_page_section() {
 
             {/* Select Service */}
             <div className="relative">
-              <select className="appearance-none w-full h-14 px-4 text-[16px] text-[#82828a] font-normal bg-white border border-gray-300 focus:outline-none pr-10">
+              <select className="appearance-none rounded-none w-full h-14 px-4 text-[16px] text-[#82828a] font-normal bg-white border border-gray-300 focus:outline-none pr-10">
                 <option>Select service</option>
                 <option value="1">Service One</option>
                 <option value="2">Service Two</option>
@@ -86,13 +113,14 @@ export default function Free_quote_page_section() {
                 </span>
               </label>
               <input
+                ref={sliderRef}
                 type="range"
                 min={0}
                 max={90000}
                 step={100}
                 value={balance}
                 onChange={(e) => setBalance(Number(e.target.value))}
-                className="w-full accent-[#2b2b5e]"
+                className="w-full h-[12px] appearance-none outline-none transition-[background] duration-150 ease-in-out"
               />
             </div>
 

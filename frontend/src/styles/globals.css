@@ -87,3 +87,44 @@ body {
   transform: translate(3%, 0%);
 }
 
+/*************** Track styling ******************/
+
+/* For Chrome/Safari (WebKit) */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  background: transparent;
+}
+
+/* For Firefox (Gecko) */
+input[type="range"]::-moz-range-track {
+  height: 6px;
+  background: transparent;
+}
+
+/**************** Thumb styling *****************/
+/* For Chrome/Safari (WebKit) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 29px;
+  width: 29px;
+  border-radius: 50%;
+  background: #2B2B5E;
+  cursor: pointer;
+  border: 2px solid white;
+  margin-top: -12px;
+}
+
+/* For Firefox (Gecko) */
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 29px;
+  width: 29px;
+  border-radius: 50%;
+  background: #2B2B5E;
+  cursor: pointer;
+  border: 2px solid white;
+  margin-top: -12px;
+}
+
+
+
