@@ -1,0 +1,26 @@
+
+.triangle-up::before {
+  content: "";
+  position: absolute;
+  top: -14px; 
+  left: 0.5rem;
+  width: 32px; 
+  height: 14px;
+  background-color: #FFFFFF;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  z-index: -1;
+}
+
+.icon-insurance {
+  position: relative;
+
+}
+
+.icon-insurance::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background:" url('/numbers_seciton/.png')"
+
+}
