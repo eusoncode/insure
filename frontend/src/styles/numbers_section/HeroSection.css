@@ -1,26 +1,49 @@
-
-.triangle-up::before {
-  content: "";
-  position: absolute;
-  top: -14px; 
-  left: 0.5rem;
-  width: 32px; 
-  height: 14px;
-  background-color: #FFFFFF;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  z-index: -1;
-}
-
-.icon-insurance {
+.triangle-up {
   position: relative;
-
+  z-index: 1;
 }
 
-.icon-insurance::before {
+.triangle-up::before,
+.triangle-up::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  background:" url('/numbers_seciton/.png')"
+  width: 32px;
+  height: 14px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  transition: background-color 300ms ease;
+}
 
+/* white triangle (top layer) */
+.triangle-up::before {
+  top: -14px;
+  left: 8px;
+  background-color: #ffffff;
+  z-index: 2;
+}
+
+/* blue triangle shadow (bottom layer) */
+.triangle-up::after {
+  top: -14px;
+  left: 8px;
+  background-color: #ffffff;
+  z-index: 3;
+}
+
+/* 🔁 Hover effect for both */
+.triangle-up:hover::before,
+.triangle-up:hover::after {
+  background-color: #363E7E;
+  opacity:70%;
+}
+
+/* Optional rectangle background if you want it to change too */
+.triangle-up.blue-shade {
+  background-color: white;
+  transition: background-color 300ms ease;
+}
+
+.triangle-up.blue-shade:hover {
+  background-color: #363E7E;
+  opacity:70%;
+  color: white;
 }
