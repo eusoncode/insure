@@ -15,35 +15,41 @@
 
 /* white triangle (top layer) */
 .triangle-up::before {
-  top: -14px;
+  top: -13px;
   left: 8px;
-  background-color: #ffffff;
+  background-color: #363E7E;
+  opacity: 0.7;
+  transition: background-color 300ms ease;
   z-index: 2;
 }
 
 /* blue triangle shadow (bottom layer) */
 .triangle-up::after {
-  top: -14px;
+  top: -13px;
   left: 8px;
-  background-color: #ffffff;
+  background-color: #363E7E;
+  opacity: 0.7;
+  transition: background-color 300ms ease;
   z-index: 3;
 }
 
 /* 🔁 Hover effect for both */
-.triangle-up:hover::before,
-.triangle-up:hover::after {
-  background-color: #363E7E;
-  opacity:70%;
+.group:hover .triangle-up::before,
+.group:hover .triangle-up::after {
+  background-color: #ffffff;
+  opacity: 1;
 }
 
-/* Optional rectangle background if you want it to change too */
-.triangle-up.blue-shade {
-  background-color: white;
+
+.blue-shade {
+  background-color: #363E7E;
+  color: #ffffff;
+  opacity: 0.7;
   transition: background-color 300ms ease;
 }
 
-.triangle-up.blue-shade:hover {
-  background-color: #363E7E;
-  opacity:70%;
-  color: white;
+.group:hover .blue-shade {
+  background-color: #ffffff;
+  color: #363E7E;
+  opacity: 1;
 }
