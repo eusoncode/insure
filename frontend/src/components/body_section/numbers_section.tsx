@@ -89,7 +89,7 @@ export default function NumbersSection() {
             key={index}
             className="relative group w-full h-45 mb-6 pt-19 cursor-pointer"
           >
-            <div className="absolute top-0 left-[-2]">{stat.icon}</div>
+            <i className="absolute top-0 left-[-2]">{stat.icon}</i>
             <div className="flex font-[950] text-white text-[36px] leading-[36px] tracking-tight mb-2">
               <h3 className="funfact-one__count count-text">
                 {stat.format ? (counts[index] / 10).toFixed(1) : counts[index]}
