@@ -7,7 +7,6 @@ import Free_quote_page_section from "@/components/body_section/free_quote_page_s
 import Numbers_section from "@/components/body_section/numbers_section";
 import Recent_portfolio_section from "@/components/body_section/recent_portfolio_section";
 import Recent_news_feed_section from "@/components/body_section/recent_news_feed_section";
-import Track_your_claim_section from "@/components/body_section/track_your_claim_section";
 
 export default function Main_section() {
   return (
@@ -22,7 +21,6 @@ export default function Main_section() {
         <Numbers_section />
         <Recent_portfolio_section />
         <Recent_news_feed_section />
-        {/* <Track_your_claim_section /> */}
       </div>
     </section>
   ); 
