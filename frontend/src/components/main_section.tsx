@@ -22,7 +22,7 @@ export default function Main_section() {
         <Numbers_section />
         <Recent_portfolio_section />
         <Recent_news_feed_section />
-        <Track_your_claim_section />
+        {/* <Track_your_claim_section /> */}
       </div>
     </section>
   ); 
