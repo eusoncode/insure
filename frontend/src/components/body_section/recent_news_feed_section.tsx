@@ -1,5 +1,5 @@
 import { VscFolderOpened } from "react-icons/vsc";
-import Image from "next/image";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function Recent_news_feed_section() {
   return (
@@ -24,7 +24,7 @@ export default function Recent_news_feed_section() {
         {/** Image section **/}
         <div className="flex justify-center items-center gap-4 mx-85 pt-12 mt-10 mb-4 border border-red-600">
           {/** Images 1 **/}
-          <div className="relative w-[31%] h-125 border border-blue-600">
+          <div className="relative w-[31%] h-125">
             {/** Date icon **/}
             <div className="absolute z-[10] top-[-10px] right-[30px] flex flex-col justify-center items-center text-center text-[10px] py-[20px] font-medium leading-[1.2em] tracking-widest text-white uppercase w-[50px] h-[58px] bg-[#00CDE5]">
               <span className="text-[18px] mb-[5px]">28</span>
@@ -33,33 +33,53 @@ export default function Recent_news_feed_section() {
 
             {/** main image **/}
             <div
-              className="w-full h-[65%] border border-red-500"
+              className="w-full h-[64%]"
               style={{
                 backgroundImage: "url('/recent_news_feed/blog-1-1.jpg')",
               }}
             ></div>
 
             {/**  **/}
-            <div className="flex flex-col gap-4 absolute bottom-[-10] left-[20] bg-white w-83 h-57 shadow-sm border border-blue-600">
+            <div className="flex flex-col gap-4 absolute bottom-[8] left-[20] bg-white w-83 h-55 shadow-sm">
               {/**  **/}
-              <div className="flex mt-6 text-sm gap-4 pl-6">
-                <i>O</i>
-                <p>by Admin</p>
-                <p>|</p>
-                <i>O</i>
-                <p>2 Comments</p>
+              <div className="flex justify-baseline items-center mt-6 text-sm pl-8">
+                <a href="#" className="flex justify-baseline items-center">
+                  <i className="fas fa-user-circle decoration-0 text-[#00CDE5] pr-1"></i>
+                  <p className="transition-al duration-500 ease-in-out decoration-0 hover:text-[#00CDE5] hover:text-shadow-lg pr-4">
+                    by Admin
+                  </p>
+                </a>
+                <p className="pr-4">|</p>
+                <a
+                  href="#"
+                  className="group flex justify-baseline items-center"
+                >
+                  <i className="fa fa-comments text-[#00CDE5] pr-1"></i>
+                  <p className="transition-al duration-500 ease-in-out decoration-0 hover:text-[#00CDE5] hover:text-shadow-lg">
+                    2 Comments
+                  </p>
+                </a>
               </div>
 
               {/**  **/}
-              <span className="font-bold text-[23px] pl-6 leading-[1.2em] py-2 text-[#2B2B5E]">
-                The quality role of the life <br /> insurance new policies in
-                <br /> company
+              <span className="font-semibold text-[20px] pl-8 leading-[1.2em] tracking-[-0.04em] py-2 text-[#2B2B5E]">
+                <a
+                  href="#"
+                  className="relative text-inherit transition-all duration-900 bg-no-repeat bg-[length:0_1px] bg-[0_calc(100%-1px)] bg-[linear-gradient(to_right,currentColor_0%,currentColor_100%)] hover:bg-[length:100%_1px]"
+                >
+                  The quality role of the life <br /> insurance new policies in
+                  <br /> company
+                </a>
               </span>
 
               {/**  **/}
-              <div className="flex gap-4 pl-6 pt-2 border-t border-[#e0ddea]">
-                <p className="">Read More</p>
-                <i className=""> -></i>
+              <div className="group flex justify-between items-center pl-8 pt-2 border-t border-[#e0ddea]">
+                <p className="transition-all duration-500 ease-in-out group-hover:text-[#00CDE5]">
+                  Read More
+                </p>
+                <i className="mt-1 mr-10 transition-all duration-500 ease-in-out group-hover:text-[#00CDE5]">
+                  <FaArrowRightLong />
+                </i>
               </div>
             </div>
           </div>
