@@ -126,4 +126,24 @@ input[type="range"]::-moz-range-thumb {
   margin-top: -12px;
 }
 
+/*************** Animation for Plus sign ******************/
+  @keyframes plus-drop {
+    0% {
+      top: 38%;
+      opacity: 0;
+    }
+    50% {
+      top: 47%;
+      opacity: 1;
+    }
+    100% {
+      top: 43%;
+      opacity: 1;
+    }
+  }
+
+  .animate-plus-drop {
+    animation: plus-drop 0.6s ease-in-out forwards;
+  }
+
 
