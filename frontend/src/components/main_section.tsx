@@ -11,7 +11,7 @@ import Recent_news_feed_section from "@/components/body_section/recent_news_feed
 export default function Main_section() {
   return (
     <section className="">
-      <div className="flex flex-col border-2 border-green-600">
+      <div className="flex flex-col">
         <Insurance_section />
         <About_company_section />
         <Offering_section />
