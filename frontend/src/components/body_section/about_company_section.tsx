@@ -10,11 +10,13 @@ import { useEffect, useState } from "react";
 
 const iconSize = 50;
 
+// Service feature cards data
 const data = [
   {
     icon: <HandCoins size={iconSize} />,
     title: "Safe Money",
-    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus omnis optio neque"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus omnis optio neque",
   },
   {
     icon: <FileText size={iconSize} />,
@@ -31,11 +33,11 @@ const data = [
 ];
 
 export default function About_company_section() {
-  const [awardCount, setAwardCount] = useState(0); // for 38
-  const [experienceCount, setExperienceCount] = useState(0); // for 30
+  const [awardCount, setAwardCount] = useState(0); // Animated award counter
+  const [experienceCount, setExperienceCount] = useState(0); // Animated years of experience
 
   useEffect(() => {
-    // Award Counter: 0 → 38
+    // Animate award count from 0 → 38
     let awardStart = 0;
     const awardTarget = 38;
     const awardDuration = 3500;
@@ -47,7 +49,7 @@ export default function About_company_section() {
       if (awardStart >= awardTarget) clearInterval(awardInterval);
     }, awardStep);
 
-    // Experience Counter: 0 → 30
+    // Animate experience count from 0 → 30
     let expStart = 0;
     const expTarget = 30;
     const expDuration = 4500;
@@ -59,7 +61,6 @@ export default function About_company_section() {
       if (expStart >= expTarget) clearInterval(expInterval);
     }, expStep);
 
-    // Cleanup both intervals
     return () => {
       clearInterval(awardInterval);
       clearInterval(expInterval);
@@ -68,19 +69,22 @@ export default function About_company_section() {
 
   return (
     <section className="about-one-home">
+      {/* Top background shape */}
       <div className="about-one-home__shape absolute right-0 top-0">
         <Image src={about_shape_1_4} alt="modins" className="img" />
       </div>
 
-      {/* <!-- Feature --> */}
+      {/* Feature Cards Section */}
       <section className="feature-one">
-        <div className="container-fluid ">
+        <div className="container-fluid">
           <div className="flex flex-row gap-8">
             {data.map((item) => (
               <div className="flex shadow-md">
+                {/* Icon block with gradient background */}
                 <div className="bg-gradient-to-t from-[#00cde5] to-[#252554] text-white flex items-center justify-center p-8">
                   {item.icon}
                 </div>
+                {/* Text content block */}
                 <div className="flex flex-col space-y-3 bg-white p-5">
                   <h2 className="text-xl font-bold">{item.title}</h2>
                   <p className="text-gray-500">{item.description}</p>
@@ -91,9 +95,10 @@ export default function About_company_section() {
         </div>
       </section>
 
-      {/*<!-- /.container --> */}
+      {/* About + Counter Section */}
       <div className="container">
         <div className="row">
+          {/* Left Column: About Images + Experience Counter */}
           <div className="col-lg-6">
             <div
               className="about-one-home__image wow fadeInLeft animated"
@@ -104,15 +109,16 @@ export default function About_company_section() {
                 animationName: "fadeInLeft",
               }}
             >
+              {/* Double image layout with arrow and experience counter */}
               <div className="about-one-home__double-image">
                 <div className="img-1 left-[-20]">
-                  <Image src={about_shape_1_1} alt="modins" className={""} />
+                  <Image src={about_shape_1_1} alt="modins" />
                 </div>
                 <div className="img-2 left-[-60] top-72">
-                  <Image src={about_shape_1_2} alt="modins" className={""} />
+                  <Image src={about_shape_1_2} alt="modins" />
                 </div>
                 <div className="about-one-home__image__arrow">
-                  <Image src={about_shape_1_3} alt="modins" className={""} />
+                  <Image src={about_shape_1_3} alt="modins" />
                 </div>
                 <div className="about-one-home__image__counter count-box counted">
                   <h3 className="about-one-home__image__count count-text">
@@ -124,9 +130,9 @@ export default function About_company_section() {
                 </div>
               </div>
             </div>
-            {/*<!-- /.why-choose-two__image --> */}
           </div>
-          {/* <!-- /.col-lg-6 --> */}
+
+          {/* Right Column: About Text + Award Counter */}
           <div
             className="col-lg-6 wow fadeInRight animated"
             data-wow-delay="300ms"
@@ -139,20 +145,20 @@ export default function About_company_section() {
             <div className="about-one-home__content max-w-xl">
               <div className="sec-title">
                 <h6 className="sec-title__tagline">About company</h6>
-                {/*<!-- /.sec-title__tagline --> */}
-
                 <h3 className="sec-title__title">
                   Providing the best insurance <br /> policy to customers
                 </h3>
-                {/*<!-- /.sec-title__title --> */}
               </div>
-              {/*<!-- /.sec-title --> */}
+
+              {/* Paragraph text */}
               <p className="about-one-home__content__text-two">
                 Lorem ipsum dolor sit amet consectur adipiscing <br /> elit sed
                 eiusmod tempor incididunt labore dolore magna aliquaenim ad
                 minim. Sed risus commodo ornare felis non, eleifend molestie
                 metus pharetra eleifend.
               </p>
+
+              {/* Bullet points + Button + Award Counter */}
               <div className="about-one-home__content__wrapper">
                 <div>
                   <ul className="about-one-home__content__list">
@@ -174,6 +180,8 @@ export default function About_company_section() {
                     <em style={{ top: "42.2031px", left: "104.5px" }}></em>
                   </a>
                 </div>
+
+                {/* Bottom-left floating award counter with icon */}
                 <div className="w-3xs absolute bottom-0.5 left-78">
                   <div className="about-one-home__content__counter">
                     <div className="shape-1">
@@ -181,16 +189,6 @@ export default function About_company_section() {
                     </div>
                     <div className="about-one-home__content__icon count-box counted">
                       <ShieldCheck size={iconSize} />
-                      {/* <div className="about-one-home__content__couter__head">
-                        <span>+</span>
-                        <span
-                          className="about-one-home__content__count count-text"
-                          data-stop="38"
-                          data-speed="1500"
-                        >
-                          38
-                        </span>
-                      </div> */}
                       <div className="about-one-home__content__couter__head">
                         <span>+</span>
                         <span className="about-one-home__content__count count-text">
@@ -205,11 +203,9 @@ export default function About_company_section() {
                 </div>
               </div>
             </div>
-            {/* <!-- /.why-choose-two__content --> */}
           </div>
-          {/* <!-- /.col-lg-6 --> */}
+          {/* End Right Column */}
         </div>
-        {/* <!-- /.row --> */}
       </div>
     </section>
   );
