@@ -8,15 +8,13 @@ import service_4 from "@/assets/offering/service-4.png";
 import service_5 from "@/assets/offering/service-5.png";
 import service_6 from "@/assets/offering/service-6.png";
 import service_7 from "@/assets/offering/service-7.png";
-// import service_featured from "@/assets/offering/service-featured.png";
 import service_8 from "@/assets/offering/service-8.png";
 import { CarFront } from "lucide-react";
-// import service_8 from "@/assets/offering/service-8.png";
 
 export default function Offering_section() {
-
   const iconSize = 35;
-  
+
+  // Data for each insurance service
   const data = [
     {
       image: <Image src={service_1} alt="Car insurance" />,
@@ -66,7 +64,7 @@ export default function Offering_section() {
       link: <a href="marriage-insurance.html">Marriage insurance</a>,
       description:
         "Lorem ipsum dolor sit amet, sed consectetur adipiscing elit.",
-    }
+    },
   ];
 
   return (
@@ -75,6 +73,7 @@ export default function Offering_section() {
       style={{ backgroundImage: `url(${insurance_bg_1.src})` }}
     >
       <div className="container">
+        {/* Section title */}
         <div className="sec-title">
           <div className="flex flex-row gap-4 justify-center items-center">
             <h6 className="sec-title__tagline">what we’re offering</h6>
@@ -84,6 +83,8 @@ export default function Offering_section() {
             We’re giving all the insurance <br /> services to you
           </h3>
         </div>
+
+        {/* Insurance service cards */}
         <div className="row gutter-y-30">
           {data.map((item, index) => (
             <div key={index} className="col-md-6 col-lg-3 group">
@@ -108,7 +109,7 @@ export default function Offering_section() {
             </div>
           ))}
 
-          {/* Last item - Featured Card */}
+          {/* Last card: Special featured service */}
           <div className="col-md-6 col-lg-3">
             <div
               className="service-card service-featured wow fadeInUp animated"
@@ -121,9 +122,7 @@ export default function Offering_section() {
             >
               <div
                 className="service-card__bg"
-                style={{
-                  backgroundImage: `url(${service_8.src})`,
-                }}
+                style={{ backgroundImage: `url(${service_8.src})` }}
               ></div>
               <div className="service-card__content">
                 <h3 className="service-card__title">
