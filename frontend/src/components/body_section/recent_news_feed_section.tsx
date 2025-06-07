@@ -27,7 +27,7 @@ const blogData = [
 
 export default function Recent_news_feed_section() {
   return (
-    <section className="flex flex-col relative justify-center items-center border border-green-600">
+    <section className="flex flex-col relative justify-center items-center">
       {/** Recent news feed section **/}
       <div className="w-full h-250 pt-8">
         {/** Caption **/}
