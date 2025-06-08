@@ -142,7 +142,7 @@ export default function Free_quote_page_section() {
 
       {/* Left-side static background image */}
       <div
-        className="w-[51.15%] h-full bg-[#F3F3F5] bg-center"
+        className="w-[51%] h-full bg-[#F3F3F5] bg-center"
         style={{
           backgroundImage: "url('/free_quote/contact-left-img.png')",
         }}

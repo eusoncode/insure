@@ -128,10 +128,10 @@ export default function Recent_news_feed_section() {
       </div>
 
       {/* Decorative background bar using before pseudo */}
-      <i className="relative before:bg-[#00CDE5] before:absolute before:content-[''] before:top-[-145] before:left-[-560] before:z-[1] before:w-280 before:h-50"></i>
+      <i className="relative before:bg-[#00CDE5] before:absolute before:content-[''] before:top-[-145] before:left-[-592] before:z-[1] before:w-296 before:h-50"></i>
 
       {/* === Call-to-action Section === */}
-      <div className="absolute z-[1] bottom-[-60] bg-gradient-to-r from-[#2B2B5E] to-[#00CDE5] h-49 w-280 mx-94 flex justify-between items-center px-14">
+      <div className="absolute z-[1] bottom-[-60] bg-gradient-to-r from-[#2B2B5E] to-[#00CDE5] h-49 w-296 flex justify-between items-center px-14">
         {/* Left: Folder icon + CTA text */}
         <div className="flex items-center z-[1] w-[70%] gap-8">
           <div className="flex items-center">
