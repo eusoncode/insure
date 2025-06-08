@@ -11,89 +11,130 @@ import homeshow_4 from "@/assets/home-showcase-4.jpg";
 
 
 export default function Navigation() {
+  const topInfoLinks = [
+    {
+      iconClass: "fas fa-map-marker-alt",
+      text: "30 Commercial Road Fratton, Australia",
+      href: "#",
+    },
+    {
+      iconClass: "fas fa-envelope",
+      text: "needhelp@company.com",
+      href: "mailto:needhelp@company.com",
+    },
+  ];
+
+  const socialIcons = [
+    { icon: "fab fa-twitter", href: "https://twitter.com", label: "Twitter" },
+    {
+      icon: "fab fa-facebook",
+      href: "https://facebook.com",
+      label: "Facebook",
+    },
+    {
+      icon: "fab fa-pinterest-p",
+      href: "https://pinterest.com",
+      label: "Pinterest",
+    },
+    {
+      icon: "fab fa-instagram",
+      href: "https://instagram.com",
+      label: "Instagram",
+    },
+  ];
+
+  const homeCards = [
+    {
+      img: homeshow_1,
+      title: "Home Page 01",
+      links: [
+        { text: "Multi Page", href: "index.html" },
+        { text: "One Page", href: "index-one-page.html" },
+      ],
+    },
+    {
+      img: homeshow_2,
+      title: "Home Page 02",
+      links: [
+        { text: "Multi Page", href: "index.html" },
+        { text: "One Page", href: "index-one-page.html" },
+      ],
+    },
+    {
+      img: homeshow_3,
+      title: "Home Page 03",
+      links: [
+        { text: "Multi Page", href: "index.html" },
+        { text: "One Page", href: "index-one-page.html" },
+      ],
+    },
+    {
+      img: homeshow_4,
+      title: "Home Box",
+      links: [{ text: "View Page", href: "index-boxed.html" }],
+    },
+  ];
+
+  const navBarLinks = [
+    { label: "Make a Claim", href: "#" },
+    { label: "FAQs", href: "#" },
+    { label: "About", href: "#" },
+  ];
+  
+
+
   return (
     <section className="flex flex-col">
       {/* First Navigation bar*/}
       <div className="flex flex-col md:flex-row justify-between items-center py-1 px-6 bg-base-didi w-full bg-header-pattern">
         {/* Left Info Section */}
         <ul className="flex flex-col md:flex-row items-center gap-4 md:gap-8 pl-8">
-          <li className="flex items-center text-[15px] space-x-2 font-medium text-white transition-colors duration-500 hover:text-[#2b2b5e]">
-            <i className="fas fa-map-marker-alt text-white text-[15px] mr-2"></i>
-            <a href="#" className="font-bold no-underline hover:underline">
-              30 Commercial Road Fratton, Australia
-            </a>
-          </li>          
-          <li className="flex items-center text-[15px] space-x-2 font-medium text-white transition-colors duration-500 hover:text-[#2b2b5e]">
-            <i className="fas fa-envelope text-white text-[15px] mr-2"></i>
-            <a
-              href="mailto:needhelp@company.com"
-              className="font-bold no-underline hover:underline"
+          {topInfoLinks.map((item, index) => (
+            <li
+              key={index}
+              className="flex items-center text-[15px] space-x-2 font-medium text-white transition-colors duration-500 hover:text-[#2b2b5e]"
             >
-              needhelp@company.com
-            </a>
-          </li>
+              <i className={`${item.iconClass} text-white text-[15px] mr-2`} />
+              <a
+                href={item.href}
+                className="font-bold no-underline hover:underline"
+              >
+                {item.text}
+              </a>
+            </li>
+          ))}
         </ul>
 
         {/* Right Menu and Social Icons */}
         <div className="flex flex-col md:flex-row items-center gap-6 mt-4 md:mt-0">
           {/* Menu */}
           <ul className="flex items-center list-none space-x-[35px]">
-            <li>
-              <a
-                href="#"
-                className="text-[15px] font-bold text-white no-underline transition-colors duration-500 hover:text-[#2b2b5e] hover:underline"
-              >
-                Make a Claim
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-[15px] font-bold text-white no-underline transition-colors duration-500 hover:text-[#2b2b5e] hover:underline"
-              >
-                FAQs
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-[15px] font-bold text-white no-underline transition-colors duration-500 hover:text-[#2b2b5e] hover:underline"
-              >
-                About
-              </a>
-            </li>
+            {navBarLinks.map((link, index) => (
+              <li key={index}>
+                <a
+                  href={link.href}
+                  className="text-[15px] font-bold text-white no-underline transition-colors duration-500 hover:text-[#2b2b5e] hover:underline"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
           </ul>
 
           {/* Social Icons */}
           <div className="flex items-center px-[60px] py-[10px] bg-cyan-400/50">
-            <a
-              href="https://twitter.com"
-              className="text-white text-[14px] transition-colors duration-500 hover:text-black"
-            >
-              <i className="fab fa-twitter" aria-hidden="true"></i>
-              <span className="sr-only">Twitter</span>
-            </a>
-            <a
-              href="https://facebook.com"
-              className="ml-5 text-white text-[14px] transition-colors duration-500 hover:text-black"
-            >
-              <i className="fab fa-facebook" aria-hidden="true"></i>
-              <span className="sr-only">Facebook</span>
-            </a>
-            <a
-              href="https://pinterest.com"
-              className="ml-5 text-white text-[14px] transition-colors duration-500 hover:text-black"
-            >
-              <i className="fab fa-pinterest-p" aria-hidden="true"></i>
-              <span className="sr-only">Pinterest</span>
-            </a>
-            <a
-              href="https://instagram.com"
-              className="ml-5 text-white text-[14px] transition-colors duration-500 hover:text-black"
-            >
-              <i className="fab fa-instagram" aria-hidden="true"></i>
-              <span className="sr-only">Instagram</span>
-            </a>
+            {socialIcons.map((social, index) => (
+              <a
+                key={index}
+                href={social.href}
+                className={`ml-${
+                  index === 0 ? 0 : 5
+                } text-white text-[14px] transition-colors duration-500 hover:text-black`}
+              >
+                <i className={social.icon} aria-hidden="true"></i>
+                <span className="sr-only">{social.label}</span>
+              </a>
+            ))}
           </div>
         </div>
       </div>
@@ -113,6 +154,7 @@ export default function Navigation() {
         {/* Navigation Links */}
         <div className="flex items-center gap-6 ml-60">
           <nav className="ml-0 mr-0 hidden md:flex">
+            {/**------- refactor**/}
             <ul className="flex items-center list-none m-0 p-0">
               {/* <!-- Home with Mega Menu --> */}
               <li className="group relative ml-[61px] pt-9 pb-9">
@@ -123,131 +165,49 @@ export default function Navigation() {
                   Home
                 </a>
                 <ul className="flex items-center absolute overflow-hidden top-full left-[-200px] right-auto z-50 bg-white shadow-xl min-w-287 gap-10 opacity-0 invisible scale-y-0 origin-top transition-all duration-800 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
-                  {/*Card 1*/}
-                  <li className="group/card1 bg-white text-center ml-10 mt-10 mb-4 w-60 h-85 transition-transform hover:-translate-y-2 overflow-hidden">
-                    <div className="relative overflow-hidden">
-                      <Image
-                        src={homeshow_1}
-                        alt="Home Page 01"
-                        className="w-full h-full transition duration-500 group-hover/card1:blur-[1px]"
-                      />
-                      <div className="absolute inset-0 py-2 bg-black/70 flex flex-col items-center justify-center gap-6 opacity-0 translate-y-0 transition-all duration-[500ms] ease-out group-hover/card1:opacity-100 group-hover/card1:translate-y-0 group-hover/card1:ease-in">
-                        <a
-                          href="index.html"
-                          className="bg-base-didi text-white text-sm font-bold px-6 py-2 rounded"
+                  {homeCards.map((card, index) => (
+                    <li
+                      key={index}
+                      className={`group/card${
+                        index + 1
+                      } bg-white text-center ml-10 mt-10 mb-4 w-60 h-85 transition-transform hover:-translate-y-2 overflow-hidden`}
+                    >
+                      <div className="relative overflow-hidden">
+                        <Image
+                          src={card.img}
+                          alt={card.title}
+                          className={`w-full h-full transition duration-500 group-hover/card${
+                            index + 1
+                          }:blur-[1px]`}
+                        />
+                        <div
+                          className={`absolute inset-0 py-2 bg-black/70 flex flex-col items-center justify-center gap-6 opacity-0 translate-y-0 transition-all duration-[500ms] ease-out group-hover/card${
+                            index + 1
+                          }:opacity-100 group-hover/card${
+                            index + 1
+                          }:translate-y-0 group-hover/card${index + 1}:ease-in`}
                         >
-                          Multi Page
-                        </a>
-                        <a
-                          href="index-one-page.html"
-                          className="bg-base-didi text-white text-sm font-bold px-6 py-2 rounded"
-                        >
-                          One Page
-                        </a>
+                          {card.links.map((link, linkIndex) => (
+                            <a
+                              key={linkIndex}
+                              href={link.href}
+                              className="bg-base-didi text-white text-sm font-bold px-6 py-2 rounded"
+                            >
+                              {link.text}
+                            </a>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                    <h3 className="text-custom-blue text-sm font-medium mt-4 pb-4">
-                      <a
-                        href="index.html"
-                        className="transition-all hover:underline"
-                      >
-                        Home Page 01
-                      </a>
-                    </h3>
-                  </li>
-
-                  {/*Card 2*/}
-                  <li className="group/card2 bg-white text-center ml-10 mt-10 mb-4 w-60 h-85 transition-transform hover:-translate-y-2 overflow-hidden">
-                    <div className="relative overflow-hidden">
-                      <Image
-                        src={homeshow_2}
-                        alt="Home Page 01"
-                        className="w-full h-full transition duration-500 group-hover/card2:blur-[1px]"
-                      />
-                      <div className="absolute inset-0 py-2 bg-black/70 flex flex-col items-center justify-center gap-6 opacity-0 translate-y-0 transition-all duration-[500ms] ease-out group-hover/card2:opacity-100 group-hover/card2:translate-y-0 group-hover/card2:ease-in">
+                      <h3 className="text-custom-blue text-sm font-medium mt-4 pb-4">
                         <a
-                          href="index.html"
-                          className="bg-base-didi text-white text-sm font-bold px-6 py-2 rounded"
+                          href={card.links[0].href}
+                          className="transition-all hover:underline"
                         >
-                          Multi Page
+                          {card.title}
                         </a>
-                        <a
-                          href="index-one-page.html"
-                          className="bg-base-didi text-white text-sm font-bold px-6 py-2 rounded"
-                        >
-                          One Page
-                        </a>
-                      </div>
-                    </div>
-                    <h3 className="text-custom-blue text-sm font-medium mt-4 pb-4">
-                      <a
-                        href="index.html"
-                        className="transition-all hover:underline"
-                      >
-                        Home Page 02
-                      </a>
-                    </h3>
-                  </li>
-
-                  {/*Card 3*/}
-                  <li className="group/card3 bg-white text-center ml-10 mt-10 mb-4 w-60 h-85 transition-transform hover:-translate-y-2 overflow-hidden">
-                    <div className="relative overflow-hidden">
-                      <Image
-                        src={homeshow_3}
-                        alt="Home Page 01"
-                        className="w-full h-full transition duration-500 group-hover/card3:blur-[1px]"
-                      />
-                      <div className="absolute inset-0 py-2 bg-black/70 flex flex-col items-center justify-center gap-6 opacity-0 translate-y-0 transition-all duration-[500ms] ease-out group-hover/card3:opacity-100 group-hover/card3:translate-y-0 group-hover/card3:ease-in">
-                        <a
-                          href="index.html"
-                          className="bg-base-didi text-white text-sm font-bold px-6 py-2 rounded"
-                        >
-                          Multi Page
-                        </a>
-                        <a
-                          href="index-one-page.html"
-                          className="bg-base-didi text-white text-sm font-bold px-6 py-2 rounded"
-                        >
-                          One Page
-                        </a>
-                      </div>
-                    </div>
-                    <h3 className="text-custom-blue text-sm font-medium mt-4 pb-4">
-                      <a
-                        href="index.html"
-                        className="transition-all hover:underline"
-                      >
-                        Home Page 03
-                      </a>
-                    </h3>
-                  </li>
-
-                  {/*Card 4*/}
-                  <li className="group/card4 bg-white text-center ml-10 mt-10 mb-4 w-60 h-85 transition-transform hover:-translate-y-2 overflow-hidden">
-                    <div className="relative overflow-hidden">
-                      <Image
-                        src={homeshow_4}
-                        alt="Home Page 01"
-                        className="w-full h-full transition duration-500 group-hover/card4:blur-[1px]"
-                      />
-                      <div className="absolute inset-0 py-2 bg-black/70 flex flex-col items-center justify-center gap-6 opacity-0 translate-y-0 transition-all duration-[500ms] ease-out group-hover/card4:opacity-100 group-hover/card4:translate-y-0 group-hover/card4:ease-in">
-                        <a
-                          href="index-boxed.html"
-                          className="bg-base-didi text-white text-sm font-bold px-6 py-2 rounded"
-                        >
-                          View Page
-                        </a>
-                      </div>
-                    </div>
-                    <h3 className="text-custom-blue text-sm font-medium mt-4 pb-4">
-                      <a
-                        href="index-boxed.html"
-                        className="transition-all hover:underline"
-                      >
-                        Home Box
-                      </a>
-                    </h3>
-                  </li>
+                      </h3>
+                    </li>
+                  ))}
                 </ul>
               </li>
 
@@ -529,7 +489,7 @@ export default function Navigation() {
                   News
                 </a>
 
-                {/* Dropdown */}
+                {/* Dropdown ------- refactor */}
                 <ul className="absolute top-full left-[-25px] z-50 w-[270px] bg-white shadow-xl p-4 flex-col space-y-2 opacity-0 invisible scale-y-0 origin-top transition-all duration-500 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:scale-y-100">
                   {/* News Grid */}
                   <li className="relative group/news">
@@ -540,6 +500,7 @@ export default function Navigation() {
                       News grid
                       <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/news:opacity-100 group-hover/news:visible group-hover/news:scale-y-100"></div>
                     </a>
+                    {/**------- refactor**/}
                     <ul className="absolute left-full top-0 mt-0 ml-6 w-[220px] bg-white shadow-lg p-3 space-y-2 opacity-0 invisible scale-y-0 origin-top-left transition-all duration-300 group-hover/news:opacity-100 group-hover/news:visible group-hover/news:scale-y-100">
                       <li className="group/newssub1">
                         <a
@@ -591,6 +552,7 @@ export default function Navigation() {
                       News details
                       <div className="flex justify-center items-center rounded-full bg-base-didi w-[6px] h-[6px] opacity-0 invisible scale-y-0 transition-all duration-300 group-hover/details:opacity-100 group-hover/details:visible group-hover/details:scale-y-100"></div>
                     </a>
+                    {/**------- refactor**/}
                     <ul className="absolute left-full top-0 mt-0 ml-6 w-[220px] bg-white shadow-lg p-3 space-y-2 opacity-0 invisible scale-y-0 origin-top-left transition-all duration-300 group-hover/details:opacity-100 group-hover/details:visible group-hover/details:scale-y-100">
                       <li className="group/detailssub1">
                         <a
