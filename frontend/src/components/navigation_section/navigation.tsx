@@ -122,7 +122,7 @@ export default function Navigation() {
           </ul>
 
           {/* Social Icons */}
-          <div className="flex items-center px-[60px] py-[10px] bg-cyan-400/50">
+          <div className="flex items-center gap-4 px-[40px] py-[10px] bg-[#00CDE5] bg-header-pattern">
             {socialIcons.map((social, index) => (
               <a
                 key={index}
