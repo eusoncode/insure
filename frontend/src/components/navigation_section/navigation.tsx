@@ -160,7 +160,7 @@ export default function Navigation() {
               {/* <!-- Home with Mega Menu --> */}
               <li className="group relative ml-[61px] pt-9 pb-9">
                 <a
-                  href="index.html"
+                  href="http://localhost:3000/"
                   className="flex items-center text-gray-500 font-medium text-[16px] transition-all duration-500"
                 >
                   <p className="group-hover:text-[#00CDE5]">Home</p>
@@ -215,7 +215,7 @@ export default function Navigation() {
               {/* About*/}
               <li className="ml-[61px] pt-9 pb-9 relative">
                 <a
-                  href="about.html"
+                  href="http://localhost:3000/about"
                   className="flex items-center text-gray-500 font-medium text-[16px] transition-all duration-500"
                 >
                   <p className="hover:text-[#00CDE5]">About</p>

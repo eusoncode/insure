@@ -1,5 +1,5 @@
 import Head from "next/head"
-import Main_section from "@/components/main_section";
+import Main_section from "@/components/pages_main_section/index_main_section";
 
 
 export default function LandingPage() {
