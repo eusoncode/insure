@@ -1,12 +1,12 @@
-import Insurance_section from "@/components/body_section/insurance_page_section";
-import About_company_section from "@/components/body_section/about_company_section";
-import Offering_section from "@/components/body_section/offering_section";
-import About_company2_section from "@/components/body_section/about_company2_section";
-import Envato_section from "@/components/body_section/envato_section";
-import Free_quote_page_section from "@/components/body_section/free_quote_page_section";
-import Numbers_section from "@/components/body_section/numbers_section";
-import Recent_portfolio_section from "@/components/body_section/recent_portfolio_section";
-import Recent_news_feed_section from "@/components/body_section/recent_news_feed_section";
+import Insurance_section from "@/components/body_section/home_page/insurance_page_section";
+import About_company_section from "@/components/body_section/home_page/about_company_section";
+import Offering_section from "@/components/body_section/home_page/offering_section";
+import About_company2_section from "@/components/body_section/home_page/about_company2_section";
+import Envato_section from "@/components/body_section/home_page/envato_section";
+import Free_quote_page_section from "@/components/body_section/home_page/free_quote_page_section";
+import Numbers_section from "@/components/body_section/home_page/numbers_section";
+import Recent_portfolio_section from "@/components/body_section/home_page/recent_portfolio_section";
+import Recent_news_feed_section from "@/components/body_section/home_page/recent_news_feed_section";
 
 export default function Main_section() {
   return (

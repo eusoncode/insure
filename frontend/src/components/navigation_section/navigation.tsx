@@ -25,19 +25,23 @@ export default function Navigation() {
   ];
 
   const socialIcons = [
-    { icon: "fab fa-twitter", href: "https://twitter.com", label: "Twitter" },
     {
-      icon: "fab fa-facebook",
+      icon: "fab fa-twitter transition-all duration-500 hover:text-[#2B2B5E]",
+      href: "https://twitter.com",
+      label: "Twitter",
+    },
+    {
+      icon: "fab fa-facebook transition-all duration-500 hover:text-[#2B2B5E]",
       href: "https://facebook.com",
       label: "Facebook",
     },
     {
-      icon: "fab fa-pinterest-p",
+      icon: "fab fa-pinterest-p transition-all duration-500 hover:text-[#2B2B5E]",
       href: "https://pinterest.com",
       label: "Pinterest",
     },
     {
-      icon: "fab fa-instagram",
+      icon: "fab fa-instagram transition-all duration-500 hover:text-[#2B2B5E]",
       href: "https://instagram.com",
       label: "Instagram",
     },
@@ -111,28 +115,27 @@ export default function Navigation() {
           <ul className="flex items-center list-none space-x-[35px]">
             {navBarLinks.map((link, index) => (
               <li key={index}>
-                <a
-                  href={link.href}
-                  className="text-[15px] font-bold text-white no-underline transition-colors duration-500 hover:text-[#2b2b5e] hover:underline"
-                >
-                  {link.label}
+                <a href={link.href}>
+                  <p
+                    className="relative text-white transition-all duration-500 text-[15px] font-bold
+                    bg-no-repeat bg-[length:0_1px] bg-[0_calc(100%-1px)] bg-[linear-gradient(to_right,currentColor_0%,currentColor_100%)] 
+                    hover:bg-[length:100%_1px] hover:text-[#2B2B5E]"
+                  >
+                    {link.label}
+                  </p>
                 </a>
               </li>
             ))}
           </ul>
 
           {/* Social Icons */}
-          <div className="flex items-center gap-4 px-[40px] py-[10px] bg-[#00CDE5] bg-header-pattern">
+          <div className="flex items-center gap-4 px-[40px] py-[10px] bg-[#00CDE5] bg-header-pattern text-white">
             {socialIcons.map((social, index) => (
-              <a
-                key={index}
-                href={social.href}
-                className={`ml-${
-                  index === 0 ? 0 : 5
-                } text-white text-[14px] transition-colors duration-500 hover:text-black`}
-              >
+              <a key={index} href={social.href}>
                 <i className={social.icon} aria-hidden="true"></i>
-                <span className="sr-only">{social.label}</span>
+                <p className="sr-only">
+                  {social.label}
+                </p>
               </a>
             ))}
           </div>
@@ -160,9 +163,9 @@ export default function Navigation() {
               <li className="group relative ml-[61px] pt-9 pb-9">
                 <a
                   href="index.html"
-                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all duration-500 group-hover:text-base-didi"
+                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all duration-500"
                 >
-                  Home
+                  <p className="group-hover:text-[#00CDE5]">Home</p>
                 </a>
                 <ul className="flex items-center absolute overflow-hidden top-full left-[-200px] right-auto z-50 bg-white shadow-xl min-w-287 gap-10 opacity-0 invisible scale-y-0 origin-top transition-all duration-800 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100">
                   {homeCards.map((card, index) => (
@@ -215,9 +218,9 @@ export default function Navigation() {
               <li className="ml-[61px] pt-9 pb-9 relative">
                 <a
                   href="about.html"
-                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi"
+                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all duration-500"
                 >
-                  About
+                  <p className="hover:text-[#00CDE5]">About</p>
                 </a>
               </li>
 
@@ -225,9 +228,9 @@ export default function Navigation() {
               <li className="group ml-[61px] pt-9 pb-9 relative">
                 <a
                   href="#"
-                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi"
+                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all"
                 >
-                  Pages
+                  <p className="group-hover:text-[#00CDE5]">Pages</p>
                 </a>
                 <ul className="absolute top-full left-[-25px] space-y-2 z-50 bg-white shadow-xl p-4 w-[270px] flex flex-col opacity-0 invisible scale-y-0 transform origin-top transition-all duration-500 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:scale-y-100">
                   <li className="relative group/pages">
@@ -318,9 +321,9 @@ export default function Navigation() {
               <li className="group ml-[61px] pt-9 pb-9 relative">
                 <a
                   href="#"
-                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi"
+                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all duration-500"
                 >
-                  Insurance
+                  <p className="group-hover:text-[#00CDE5]">Insurance</p>
                 </a>
                 <ul className="absolute top-full left-[-25px] space-y-2 z-50 bg-white shadow-xl p-4 w-[270px] flex flex-col opacity-0 invisible scale-y-0 transform origin-top transition-all duration-500 group-hover:opacity-100 group-hover:visible group-hover:scale-y-100 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:scale-y-100">
                   <li className="relative group/insurance">
@@ -440,7 +443,7 @@ export default function Navigation() {
                   href="#"
                   className="flex items-center text-gray-500 font-medium text-[16px] transition-all duration-500 group-hover:text-base-didi focus:text-base-didi"
                 >
-                  Portfolio
+                  <p className="group-hover:text-[#00CDE5]">Portfolio</p>
                 </a>
 
                 {/* Dropdown */}
@@ -486,7 +489,7 @@ export default function Navigation() {
                   href="#"
                   className="flex items-center text-gray-500 font-medium text-[16px] transition-all duration-500 group-hover:text-base-didi focus:text-base-didi"
                 >
-                  News
+                  <p className="group-hover:text-[#00CDE5]">News</p>
                 </a>
 
                 {/* Dropdown ------- refactor */}
@@ -590,9 +593,9 @@ export default function Navigation() {
               <li className="ml-[61px] pt-9 pb-9 relative">
                 <a
                   href="contact.html"
-                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all hover:text-base-didi"
+                  className="flex items-center text-gray-500 font-medium text-[16px] transition-all duration-500"
                 >
-                  Contact
+                  <p className="hover:text-[#00CDE5]">Contact</p>
                 </a>
               </li>
             </ul>
@@ -612,10 +615,10 @@ export default function Navigation() {
           {/* Quote */}
           <a
             href="#"
-            className="relative group inline-block overflow-hidden bg-custom-blue text-white text-md font-bold w-full px-8 py-4 transition-colors duration-500 hover:bg-base-didi"
+            className="relative inline-block overflow-hidden bg-custom-blue w-full px-8 py-4 transition-all duration-500 hover:bg-[#00CDE5]"
           >
-            Get a Quote
-            <em className="absolute top-1/2 left-1/2 w-0 h-0 rounded-full bg-base-didi z-[-1] transition-all duration-500 ease-in-out group-hover:w-[500px] group-hover:h-[500px] transform -translate-x-1/2 -translate-y-1/2"></em>
+            <p className="text-sm font-semiBold text-white">Get a Quote</p>
+            <em className="absolute top-1/2 left-1/2 w-0 h-0 rounded-full bg-base-didi z-[-1] transition-all duration-500  group-hover:w-[500px] group-hover:h-[500px] transform -translate-x-1/2 -translate-y-1/2"></em>
           </a>
         </div>
 

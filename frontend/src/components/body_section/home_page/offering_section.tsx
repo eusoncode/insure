@@ -1,4 +1,4 @@
-import "../../styles/offering/HeroSection.css";
+import "../../../styles/offering/HeroSection.css";
 import Image from "next/image";
 import insurance_bg_1 from "@/assets/offering/insurace-bg-1.jpg";
 import service_1 from "@/assets/offering/service-1.png";

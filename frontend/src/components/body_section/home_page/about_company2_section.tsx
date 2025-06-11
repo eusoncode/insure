@@ -1,5 +1,5 @@
 import { LuQuote } from "react-icons/lu";
-import "../../styles/About-company2/HeroSection.css";
+import "../../../styles/About-company2/HeroSection.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";

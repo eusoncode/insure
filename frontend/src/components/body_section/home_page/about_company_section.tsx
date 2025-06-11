@@ -1,4 +1,4 @@
-import "../../styles/About-company/HeroSection.css";
+import "../../../styles/About-company/HeroSection.css";
 import Image from "next/image";
 import about_shape_1 from "@/assets/about_shape_1.png";
 import about_shape_1_1 from "@/assets/about_shape_1_1.png";

@@ -1,4 +1,4 @@
-import "../../styles/numbers_section/HeroSection.css";
+import "../../../styles/numbers_section/HeroSection.css";
 import { useEffect, useState } from "react";
 import { GrCertificate } from "react-icons/gr";
 import { FaPeopleGroup, FaPeopleRoof, FaHandshake } from "react-icons/fa6";

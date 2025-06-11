@@ -6,12 +6,12 @@ import family_image from "@/assets/main-slder-shape-2e.png";
 import arrow_shape from "@/assets/arrow-shape.png";
 
 // Component-specific styles
-import "../../styles/HeroSection.css";
-import "../../styles/car.css";
-import "../../styles/house.css";
-import "../../styles/family.css";
-import "../../styles/right-arrow.css";
-import "../../styles/left-arrow.css";
+import "../../../styles/HeroSection.css";
+import "../../../styles/car.css";
+import "../../../styles/house.css";
+import "../../../styles/family.css";
+import "../../../styles/right-arrow.css";
+import "../../../styles/left-arrow.css";
 
 import { CarFront } from "lucide-react";
 
