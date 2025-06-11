@@ -99,11 +99,14 @@ export default function Navigation() {
               className="flex items-center text-[15px] space-x-2 font-medium text-white transition-colors duration-500 hover:text-[#2b2b5e]"
             >
               <i className={`${item.iconClass} text-white text-[15px] mr-2`} />
-              <a
-                href={item.href}
-                className="font-bold no-underline hover:underline"
-              >
-                {item.text}
+              <a href={item.href}>
+                <p
+                  className="relative text-white transition-all duration-500 text-[15px] font-bold
+                    bg-no-repeat bg-[length:0_1px] bg-[0_calc(100%-1px)] bg-[linear-gradient(to_right,currentColor_0%,currentColor_100%)] 
+                    hover:bg-[length:100%_1px] hover:text-[#2B2B5E]"
+                >
+                  {item.text}
+                </p>
               </a>
             </li>
           ))}
@@ -133,9 +136,7 @@ export default function Navigation() {
             {socialIcons.map((social, index) => (
               <a key={index} href={social.href}>
                 <i className={social.icon} aria-hidden="true"></i>
-                <p className="sr-only">
-                  {social.label}
-                </p>
+                <p className="sr-only">{social.label}</p>
               </a>
             ))}
           </div>
@@ -145,12 +146,9 @@ export default function Navigation() {
       {/* Second Navigation bar*/}
       <div className="flex flex-row justify-between items-center relative pr-6">
         {/* Logo */}
-        <div>
-          <CustomLink
-            href="#"
-            className="flex max-w-3xs p-6 max-h-screen bg-custom-blue"
-          >
-            <Image src={logo} alt="logo" priority width={500} />
+        <div className="flex justify-center items-center w-65 h-28 bg-custom-blue">
+          <CustomLink href="#">
+            <Image src={logo} alt="logo" priority width={140} />
           </CustomLink>
         </div>
 
