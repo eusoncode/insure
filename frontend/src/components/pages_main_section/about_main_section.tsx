@@ -19,6 +19,23 @@ export default function About_main_section() {
         </div>
       </div>
 
+      {/** About company section **/}
+      <div className=" w-full h-120 bg-white"></div>
+
+      {/** Our Testimonials section **/}
+      <div className=" w-full h-155 bg-[url('/about_page/testimonail-one-bg.jpg')] bg-cover z-0 flex items-center justify-center overflow-hidden">
+        <div className="relative z-[1] flex w-full overflow-hidden">
+          {/** Caption**/}
+          <div className="w-130 h-100 z-[3] bg-white ml-97 border border-blue-500"></div>
+
+          {/** Testimonials **/}
+          <div className="absolute top-20 z-[2] overflow-hidden flex items-center justify-end gap-10 w-full h-60 bg-transparent">
+            <div className="relative right-[-460] w-150 h-60 bg-white border border-blue-500"></div>
+            <div className="relative right-[-450]  w-150 h-60 bg-white border border-blue-500"></div>
+          </div>
+        </div>
+      </div>
+
       {/** Team members section **/}
       <div className="flex flex-col items-center w-full h-236">
         {/* Title section */}
