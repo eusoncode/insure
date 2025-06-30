@@ -26,12 +26,68 @@ export default function About_main_section() {
       <div className=" w-full h-155 bg-[url('/about_page/testimonail-one-bg.jpg')] bg-cover z-0 flex items-center justify-center overflow-hidden">
         <div className="relative z-[1] flex w-full overflow-hidden">
           {/** Caption**/}
-          <div className="w-130 h-100 z-[3] bg-white ml-97 border border-blue-500"></div>
+          <div className="w-130 h-80 pt-4 px-8 z-[3] ml-90">
+            {/* Heading */}
+            <div className="mb-3">
+              <div className="flex items-center gap-4 mb-4">
+                <p className="text-sm font-bold uppercase text-gray-400 tracking-wider">
+                  our testimonial
+                </p>
+                <span className="w-4 h-1 mt-1.5 bg-[#00CDE5] rounded"></span>
+              </div>
+              <p className="text-4xl font-bold text-white tracking-wider">
+                What they’re talking <br /> about us our policy
+              </p>
+            </div>
+
+            {/* Description */}
+            <p className="pt-6 leading-8 text-gray-400">
+              Lorem Ipsum is simply dummy text of free available in <br />
+              market the printing and typesetting industry has been the <br />
+              industry's standard dummy text ever.
+            </p>
+
+            {/* Navigation dots (static style) */}
+            <div className="flex gap-4 mt-8 w-50">
+              <button className="w-8 h-1 mt-3 rounded bg-[#00CDE5]" />
+              <button className="w-8 h-1 mt-3 rounded bg-[#F0F0F0]" />
+              <button className="w-8 h-1 mt-3 rounded bg-[#F0F0F0]" />
+            </div>
+          </div>
 
           {/** Testimonials **/}
-          <div className="absolute top-20 z-[2] overflow-hidden flex items-center justify-end gap-10 w-full h-60 bg-transparent">
-            <div className="relative right-[-460] w-150 h-60 bg-white border border-blue-500"></div>
-            <div className="relative right-[-450]  w-150 h-60 bg-white border border-blue-500"></div>
+          <div className="absolute overflow-hidden flex items-center justify-end w-full h-72 bg-transparent">
+            <div className="relative -right-[200px] w-[560px] h-75 p-8 bg-white border border-blue-500">
+              <div className="flex gap-6 justify-start items-center">
+                <div
+                  className="relative w-20 h-20 bg-[url('/about_page/testi-1-1.jpg')] bg-cover z-[2]
+                  before:content-[''] before:absolute before:top-0 before:right-[-10px]
+                  before:w-full before:h-full before:bg-amber-300 before:z-[-1]"
+                ></div>
+
+                <div className="">
+                  <div className="flex gap-1 py-1 mt-1 text-xs">
+                    {[...Array(5)].map((_, i) => (
+                      <i key={i} className="fa fa-star text-[#00cde5]"></i>
+                    ))}
+                  </div>
+                  <p className="">Kevin martin</p>
+                  <p className="">Co Founder</p>
+                </div>
+              </div>
+              <p className="text-md pt-6 leading-8 text-gray-500">
+                Leverage agile frameworks to provide a robust synopsis for high{" "}
+                <br />
+                level overviews. Iterative approaches to corporate strategy data{" "}
+                <br />
+                foster to collaborative thinking
+              </p>
+              <div className="absolute right-0 top-0 z-[5] w-[132px] h-[160px] bg-[url('/about_page/testi-shape-one.png')] bg-cover"></div>
+            </div>
+
+            <div className="relative -right-[230px] w-[560px] h-72 bg-white border border-blue-500">
+              <div className="absolute right-0 top-0 z-[5] w-[132px] h-[160px] bg-[url('/about_page/testi-shape-one.png')] bg-cover"></div>
+            </div>
           </div>
         </div>
       </div>
