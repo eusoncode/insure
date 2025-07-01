@@ -20,7 +20,104 @@ export default function About_main_section() {
       </div>
 
       {/** About company section **/}
-      <div className=" w-full h-120 bg-white"></div>
+      <div className=" w-full min-h-screen bg-white">
+        <div className="flex flex-col gap-6 justify-center items-center w-full h-full border border-blue-600">
+          {/** About Company **/}
+          <div className="flex justify-between mt-32 mb-25 w-[70%] h-140 border border-blue-600 relative">
+            <div>
+              {/* SHAPE BEHIND THE IMAGE — outside the image div */}
+              <div className="absolute top-0 left-0 w-[42%] h-full bg-[url('/about_page/about-one-shape.png')] bg-cover bg-no-repeat z-0"></div>
+
+              {/* IMAGE IN FRONT */}
+              <div className="absolute top-0 left-[40px] w-[42%] h-full z-2 bg-[url('/about_page/about-1-1.png')] bg-center bg-cover"></div>
+
+              {/* ICON IN FRONT */}
+              <div
+                className="absolute top-0 left-0 w-22 h-22 z-3 flex justify-center items-center bg-center bg-no-repeat bg-[#00CDE5]"
+                style={{ backgroundImage: "url('/about_page/logo-icon.png')" }}
+              ></div>
+            </div>
+
+            {/* TEXT BOX */}
+            <div className="w-[50%] h-full pt-4  border border-red-600">
+              {/** Caption**/}
+              <div className="mb-3">
+                <div className="flex items-center gap-4 mb-4">
+                  <p className="text-sm font-bold uppercase text-gray-400 tracking-widest">
+                    about company
+                  </p>
+                  <span className="w-4 h-1 mt-1.5 bg-[#00CDE5] rounded"></span>
+                </div>
+                <p className="text-[45px] font-bold tracking-[-0.04em] leading-[1.2em] mb-[0.5em] text-[#2B2B5E] ">
+                  Providing the best insurance <br /> policy to customers
+                </p>
+              </div>
+
+              {/* Description */}
+              <p className="leading-8 text-gray-40">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem
+                et quia magni. <br />
+                Laborum saepe corrupti neque quo,recusandae dolorum fugit eius
+                incidunt, <br /> repudiandae beatae facilis tempore temporibus
+                atque labore doloribus!
+              </p>
+
+              {/* Protect your life */}
+              <div className="flex justify-start items-center gap-4 mt-6">
+                <div
+                  className="w-18 h-18 flex justify-center items-center bg-center bg-no-repeat bg-transparent"
+                  style={{
+                    backgroundImage: "url('/about_page/icon-employees-1.png')",
+                    backgroundSize: "70px 70px",
+                  }}
+                ></div>
+
+                <div>
+                  <p className="text-[#2B2B5E] font-bold text-lg">
+                    Protect your life
+                  </p>
+                  <p className="">
+                    We're here for look even you from start to finish.
+                  </p>
+                </div>
+              </div>
+
+              {/* Discover More */}
+              <div className="flex justify-start items-center gap-4 mt-10">
+                <div className="pr-16">
+                  {/* Submit button */}
+                  <button
+                    type="submit"
+                    className="w-42 hover:bg-[#00cde5] text-white py-4 px-6 bg-[#2b2b5e] transition duration-300 ease-in-out"
+                  >
+                    Discover More
+                  </button>
+                </div>
+                <div className="w-60 h-15 border border-amber-300"></div>
+              </div>
+            </div>
+          </div>
+
+          {/** Contact us **/}
+          <div className="relative w-[63%] h-45 mb-32 bg-[url('/about_page/banner-one-bg.jpg')] bg-center flex justify-between items-center">
+            <span className="absolute top-0 left-0 w-40 h-full bg-[url('/about_page/banner-one-shape.png')] bg-center bg-cover"></span>
+            <div className="">
+              <p className="text-4xl font-bold text-white pl-18">
+                Find a local insurance agent
+              </p>
+            </div>
+            <div className="pr-16">
+              {/* Submit button */}
+              <button
+                type="submit"
+                className="w-38 bg-[#00cde5] text-white py-3 px-6 hover:bg-white hover:text-[#2b2b5e] transition duration-300 ease-in-out"
+              >
+                Contact us
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/** Our Testimonials section **/}
       <div className=" w-full h-155 bg-[url('/about_page/testimonail-one-bg.jpg')] bg-cover z-0 flex items-center justify-center overflow-hidden">
