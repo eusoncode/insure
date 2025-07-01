@@ -48,7 +48,7 @@ export default function About_main_section() {
             </p>
 
             {/* Navigation dots (static style) */}
-            <div className="flex gap-4 mt-8 w-50">
+            <div className="flex gap-4 mt-4 w-50">
               <button className="w-8 h-1 mt-3 rounded bg-[#00CDE5]" />
               <button className="w-8 h-1 mt-3 rounded bg-[#F0F0F0]" />
               <button className="w-8 h-1 mt-3 rounded bg-[#F0F0F0]" />
@@ -57,14 +57,15 @@ export default function About_main_section() {
 
           {/** Testimonials **/}
           <div className="absolute overflow-hidden flex items-center justify-end w-full h-72 bg-transparent">
-            <div className="relative -right-[200px] w-[560px] h-75 p-8 bg-white border border-blue-500">
-              <div className="flex gap-6 justify-start items-center">
-                <div
-                  className="relative w-20 h-20 bg-[url('/about_page/testi-1-1.jpg')] bg-cover z-[2]
-                  before:content-[''] before:absolute before:top-0 before:right-[-10px]
-                  before:w-full before:h-full before:bg-amber-300 before:z-[-1]"
-                ></div>
+            <div className="relative group -right-[150px] w-[560px] h-75 p-8 bg-white">
+              <div className="flex gap-6 justify-start items-center relative">
+                {/* Before pseudo */}
+                <div className="absolute top-0 left-0 w-24 h-24 bg-[#00cde5] group-hover:bg-[#2B2B5E] transition-all duration-300 ease-in-out z-[1] translate-x-[10px]"></div>
 
+                {/* Profile image in front */}
+                <div className="relative w-24 h-24 bg-[url('/about_page/testi-1-1.jpg')] bg-cover z-[10]"></div>
+
+                {/* Text info */}
                 <div className="">
                   <div className="flex gap-1 py-1 mt-1 text-xs">
                     {[...Array(5)].map((_, i) => (
@@ -75,6 +76,8 @@ export default function About_main_section() {
                   <p className="">Co Founder</p>
                 </div>
               </div>
+
+              {/* Quote text */}
               <p className="text-md pt-6 leading-8 text-gray-500">
                 Leverage agile frameworks to provide a robust synopsis for high{" "}
                 <br />
@@ -82,10 +85,41 @@ export default function About_main_section() {
                 <br />
                 foster to collaborative thinking
               </p>
+
+              {/* Decorative shape */}
               <div className="absolute right-0 top-0 z-[5] w-[132px] h-[160px] bg-[url('/about_page/testi-shape-one.png')] bg-cover"></div>
             </div>
 
-            <div className="relative -right-[230px] w-[560px] h-72 bg-white border border-blue-500">
+            <div className="relative group -right-[180px] w-[560px] h-75 p-8 bg-white">
+              <div className="flex gap-6 justify-start items-center relative">
+                {/* Before pseudo */}
+                <div className="absolute top-0 left-0 w-24 h-24 bg-[#00cde5] group-hover:bg-[#2B2B5E] transition-all duration-300 ease-in-out z-[1] translate-x-[10px]"></div>
+
+                {/* Profile image in front */}
+                <div className="relative w-24 h-24 bg-[url('/about_page/testi-1-2.jpg')] bg-cover z-[10]"></div>
+
+                {/* Text info */}
+                <div className="">
+                  <div className="flex gap-1 py-1 mt-1 text-xs">
+                    {[...Array(5)].map((_, i) => (
+                      <i key={i} className="fa fa-star text-[#00cde5]"></i>
+                    ))}
+                  </div>
+                  <p className="">Kevin martin</p>
+                  <p className="">Co Founder</p>
+                </div>
+              </div>
+
+              {/* Quote text */}
+              <p className="text-md pt-6 leading-8 text-gray-500">
+                Leverage agile frameworks to provide a robust synopsis for high{" "}
+                <br />
+                level overviews. Iterative approaches to corporate strategy data{" "}
+                <br />
+                foster to collaborative thinking
+              </p>
+
+              {/* Decorative shape */}
               <div className="absolute right-0 top-0 z-[5] w-[132px] h-[160px] bg-[url('/about_page/testi-shape-one.png')] bg-cover"></div>
             </div>
           </div>
