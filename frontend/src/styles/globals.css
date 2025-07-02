@@ -66,7 +66,7 @@ body {
 .before-custom-clip::before {
   content: '';
   position: absolute;
-  height: 237px;
+  height: 235px;
   width: 100%;
   top: 0;
   left: 0;

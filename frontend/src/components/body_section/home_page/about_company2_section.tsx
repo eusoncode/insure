@@ -137,12 +137,7 @@ export default function About_company2_section() {
             </div>
 
             {/* Triangle design below the card */}
-            <div
-              className="absolute z-5 top-58 left-15 w-39 h-15 bg-[#00CDE5]"
-              style={{
-                clipPath: "polygon(0px 0px, 100% 0px, 0% 92%)",
-              }}
-            ></div>
+            <div className="absolute z-5 top-57 left-15 w-39 h-15 bg-[url('/about_company2/testi-shape-1-1.png')] bg-center bg-no-repeat"></div>
 
             {/* Author section */}
             <div className="flex items-center ml-40 mt-3 gap-2">
