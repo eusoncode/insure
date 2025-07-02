@@ -1,5 +1,6 @@
 import Envato_section from "@/components/body_section/home_page/envato_section";
 import { HiShare } from "react-icons/hi";
+import { PiPhoneCallLight } from "react-icons/pi";
 
 export default function About_main_section() {
   return (
@@ -21,9 +22,9 @@ export default function About_main_section() {
 
       {/** About company section **/}
       <div className=" w-full min-h-screen bg-white">
-        <div className="flex flex-col gap-6 justify-center items-center w-full h-full border border-blue-600">
+        <div className="flex flex-col gap-6 justify-center items-center w-full h-full">
           {/** About Company **/}
-          <div className="flex justify-between mt-32 mb-25 w-[70%] h-140 border border-blue-600 relative">
+          <div className="flex justify-between mt-32 mb-25 w-[70%] h-140 relative">
             <div>
               {/* SHAPE BEHIND THE IMAGE — outside the image div */}
               <div className="absolute top-0 left-0 w-[42%] h-full bg-[url('/about_page/about-one-shape.png')] bg-cover bg-no-repeat z-0"></div>
@@ -39,7 +40,7 @@ export default function About_main_section() {
             </div>
 
             {/* TEXT BOX */}
-            <div className="w-[50%] h-full pt-4  border border-red-600">
+            <div className="w-[50%] h-full pt-4">
               {/** Caption**/}
               <div className="mb-3">
                 <div className="flex items-center gap-4 mb-4">
@@ -54,7 +55,7 @@ export default function About_main_section() {
               </div>
 
               {/* Description */}
-              <p className="leading-8 text-gray-40">
+              <p className="leading-8 text-[#82828A]">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem
                 et quia magni. <br />
                 Laborum saepe corrupti neque quo,recusandae dolorum fugit eius
@@ -76,7 +77,7 @@ export default function About_main_section() {
                   <p className="text-[#2B2B5E] font-bold text-lg">
                     Protect your life
                   </p>
-                  <p className="">
+                  <p className="text-[#82828A]">
                     We're here for look even you from start to finish.
                   </p>
                 </div>
@@ -84,7 +85,7 @@ export default function About_main_section() {
 
               {/* Discover More */}
               <div className="flex justify-start items-center gap-4 mt-10">
-                <div className="pr-16">
+                <div className="pr-2">
                   {/* Submit button */}
                   <button
                     type="submit"
@@ -93,7 +94,21 @@ export default function About_main_section() {
                     Discover More
                   </button>
                 </div>
-                <div className="w-60 h-15 border border-amber-300"></div>
+                <div className="group flex justify-start items-center gap-2 w-60 h-15">
+                  <span className="flex justify-center items-center text-3xl w-14 h-14 rounded-full bg-center bg-no-repeat transition-all duration-500 ease-in-out group-hover:text-white group-hover:bg-[#2b2b5e] border border-gray-300">
+                    <PiPhoneCallLight />
+                  </span>
+                  <span className="text-sm font-medium text-gray-500 leading-tight">
+                    <p className="text-[#82828A]">Call experts</p>
+                    <p
+                      className="text-[16px] font-bold text-custom-blue mt-1 transition-all duration-500 ease-in-out
+                      bg-no-repeat bg-[length:0_1px] bg-[0_calc(100%-1px)] bg-[linear-gradient(to_right,currentColor_0%,currentColor_100%)] 
+                      group-hover:bg-[length:100%_1px] group-hover:text-[#00CDE5]"
+                    >
+                      +92 (003) 68-0900
+                    </p>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -110,7 +125,7 @@ export default function About_main_section() {
               {/* Submit button */}
               <button
                 type="submit"
-                className="w-38 bg-[#00cde5] text-white py-3 px-6 hover:bg-white hover:text-[#2b2b5e] transition duration-300 ease-in-out"
+                className="w-38 bg-[#00cde5] text-white py-3 px-6 hover:bg-white hover:text-[#2b2b5e] transition duration-500 ease-in-out"
               >
                 Contact us
               </button>
